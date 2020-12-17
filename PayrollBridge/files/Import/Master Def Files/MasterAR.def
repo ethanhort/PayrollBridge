@@ -1,0 +1,127 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                            MasterAR.Def
+REM,                     ACCOUNTS RECEIVABLE MODULE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,CUSTOMER, C:\MIP Share\Import\CSV Samples\Cust.csv,,C:\MIP Share\Import\CSV Samples\CustERR.csv
+FILE,CUSTOMERSHIPADDR, C:\MIP Share\Import\CSV Samples\CustShipAddr.csv,,C:\MIP Share\Import\CSV Samples\CustShipAddrERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM,----------------------------------------------------------------------------
+REM,                    Accounts Receivable Import
+REM,----------------------------------------------------------------------------
+REM, ***************************************************************************
+REM, If you are importing Default GL and Distribution codes for a customer,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or your customer will not import.
+REM, ***************************************************************************
+
+REM,----------------------------------------------------------------------------
+REM,                      Customer Information Import
+REM,----------------------------------------------------------------------------
+REM, Customer Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CUSTOMER,HEADER,HCUST
+CUSTOMER_ID
+CUSTOMER_STATUS
+CUSTOMER_NAME
+CUSTOMER_CURRENCYTYPE
+CUSTOMER_FORCECURTYPE
+CUSTOMER_CASHCUSTOMER
+CUSTOMER_CLASS
+CUSTOMER_TYPE
+CUSTOMER_ADDRESS
+CUSTOMER_BILLINGCITY
+CUSTOMER_BILLINGSTATE
+CUSTOMER_BILLINGZIP
+CUSTOMER_BILLINGCOUNTRY
+CUSTOMER_BILLINGPHONE
+CUSTOMER_BILLINGFAX
+CUSTOMER_BILLINGFIRSTNAME
+CUSTOMER_BILLINGMIDDLENAME
+CUSTOMER_BILLINGLASTNAME
+CUSTOMER_BILLINGTITLE
+CUSTOMER_BILLINGPOSITION
+CUSTOMER_BILLINGEMAIL
+CUSTOMER_CREDITSTOP
+CUSTOMER_CUSTOMERCOMMENT
+CUSTOMER_NETDUEDAYS
+CUSTOMER_DISCOUNT1 
+CUSTOMER_DAYSAVAILABLE1 
+CUSTOMER_DISCOUNT2 
+CUSTOMER_DAYSAVAILABLE2 
+CUSTOMER_DEFREVACCT
+CUSTOMER_DEFPREPAYACCT
+CUSTOMER_DISTCODE
+CUSTOMER_DISCACCT 
+CUSTOMER_WEBSITE
+CUSTOMER_RESALETAXID
+CUSTOMER_NOTES
+CUSTOMER_SERVICESAMEAS
+CUSTOMER_SERVICEADDRESS
+CUSTOMER_SERVICECITY
+CUSTOMER_SERVICESTATE
+CUSTOMER_SERVICEZIP
+CUSTOMER_SERVICECOUNTRY
+CUSTOMER_SERVICEPHONE
+CUSTOMER_SERVICEFAX
+CUSTOMER_SERVICEFIRSTNAME
+CUSTOMER_SERVICEMIDDLENAME
+CUSTOMER_SERVICELASTNAME
+CUSTOMER_SERVICETITLE
+CUSTOMER_SERVICEPOSITION
+CUSTOMER_SERVICEEMAIL
+CUSTOMER_TAXABLE		 
+CUSTOMER_FINCHARGES
+CUSTOMER_DEFSHIPADDRCODEID
+CUSTOMER_PAPER
+CUSTOMER_EMAIL
+CUSTOMER_EMAILADDR
+CUSTOMER_EMAILTEMPLATE
+CUSTOMER_STMTEMAIL
+CUSTOMER_STMTPAPER
+CUSTOMER_STMTEMAILADDR
+CUSTOMER_STMTEMAILTEMPLATE
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM,                      Customer Information Import
+REM,----------------------------------------------------------------------------
+REM, Customer Ship Address Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CUSTOMERSHIPADDR,HEADER,HCUSTSHIPADDR
+CUSTOMER_SHIPCUSTID
+CUSTOMER_SHIPADDRESS_ID
+CUSTOMER_SHIPADDRESS
+CUSTOMER_SHIPCITY
+CUSTOMER_SHIPSTATE
+CUSTOMER_SHIPZIP
+CUSTOMER_SHIPCOUNTRY
+CUSTOMER_SHIPTITLE
+CUSTOMER_SHIPFIRSTNAME
+CUSTOMER_SHIPMIDDLE_INITIAL
+CUSTOMER_SHIPLAST_NAME
+CUSTOMER_SHIPPOSITION
+CUSTOMER_SHIPPHONE
+CUSTOMER_SHIPEMAIL
+CUSTOMER_SHIPFAX
+CUSTOMER_SHIPTAX_CODE
+ENDCONTEXT

@@ -1,0 +1,6 @@
+HCOA  Fund        07     Non-Appropriated Funding        NAF                             N/A
+HCOA  GL          58001  Landscaping                     Landscaping      EXP  N/A       MNT
+HCOA  GL          58002  Electrical Supplies             Electric         EXP  N/A       MNT
+HCOA  GL          58003  Cable                           Cable            EXP  N/A       MNT
+HCOA  GL          58004  General Maintenance             Maint            EXP  N/A       MNT
+HCOA  GL          11998  USD Cash Account                USD Cash         CSH  N/A       CCE  USD

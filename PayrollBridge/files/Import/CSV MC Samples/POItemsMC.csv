@@ -1,0 +1,13 @@
+ItemCode,Description,Code_0,Units,Cost,UnitType,,,,,,,,USD
+K-1713,Lettuce,60001,24,21.99,Heads,N,,,,,,,USD
+K-1714,Tomatoes,60001,25,2.99,Bushels,N,,,,,,,USD
+K-1715,Squash,60001,4,8.45,Crates,N,,,,,,,USD
+K-1716,Cucumbers,60001,2,12.75,Crates,N,,,,,,,USD
+K-1717,Corn - Fresh,60001,2,3.75,Bags,N,,,,,,,USD
+K-1718,Corn - Canned,60001,5,17.95,Flats,N,,,,,,,USD
+K-1719,Pork,60001,100,0.75,lbs.,N,,,,,,,USD
+K-1720,Beef,60001,100,0.95,lbs.,N,,,,,,,USD
+K-1721,Chicken,60001,150,0.65,lbs.,N,,,,,,,USD
+K-1722,Turkey,60001,50,0.55,lbs.,N,,,,,,,USD
+K-1723,Emu,60001,50,0.85,lbs.,N,,,,,,,USD
+

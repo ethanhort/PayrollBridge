@@ -1,0 +1,53 @@
+REM,----------------------------------------------------------------
+REM,                         KTS
+REM,                 MOST Journal Vouchers
+REM,----------------------------------------------------------------
+
+FILE,SESSION,	C:\MIP Share\
+
+TRANSACTION_READ,1
+
+CONTEXTIDPOSITION,1,7
+
+REM,-------------------------------------------------------------------
+REM, Session Header Information
+REM,-------------------------------------------------------------------
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,8,8
+SESSION_TRANSSOURCEID,51,3
+SESSION_SESSIONDATE,43,8
+SESSION_DESCRIPTION,18,25
+SESSION_STATUS,16,2
+ENDCONTEXT
+
+REM,-------------------------------------------------------------------
+REM, Document Header Information
+REM,-------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,8,8
+TEDOC_TRANSOURCE,26,3
+TEDOC_DOCNUM,16,10
+TEDOC_DOCDATE,29,8
+TEDOC_DESCRIPTION,37,40
+ENDCONTEXT
+
+REM,-------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,-------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,8,8
+TETRANS_DOCNUM,16,10
+TETRANS_TRANSOURCE,26,3
+TETRANS_DESCRIPTION,29,40
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,69,8
+TETRANS_SEGMENT_GL,103,5
+TETRANS_SEGMENT_Fund,108,2
+TETRANS_SEGMENT_Grant,110,3
+TETRANS_SEGMENT_Progr,113,3
+TETRANS_SEGMENT_Dept,116,3
+TETRANS_SEGMENT_117,119,1
+TETRANS_DEBIT,77,13,0,2
+TETRANS_CREDIT,90,13,0,2
+ENDCONTEXT
+

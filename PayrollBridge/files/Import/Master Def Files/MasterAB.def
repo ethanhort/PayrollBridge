@@ -1,0 +1,96 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                            MasterAB.Def
+REM,                     ACCOUNTS RECEIVABLE BILLING MODULE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,CHARGECODE, C:\MIP Share\Import\CSV Samples\ChgCd.csv,,C:\MIP Share\Import\CSV Samples\ChgCdERR.csv
+FILE,ONETIMECHARGES, C:\MIP Share\Import\CSV Samples\OneTimeCharges.csv,C:\MIP Share\Import\CSV Samples\OneTimeChargesERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM,----------------------------------------------------------------------------
+REM,                    Accounts Receivable Billing Import
+REM,----------------------------------------------------------------------------
+REM, ***************************************************************************
+REM, If you are importing One Time charges for a customer, the customer, the charge codes, 
+REM, and the distribution codes for that customer ID must have already been entered
+REM, in the database, either through the Maintain Menu or the Import option, or your 
+REM, one time charges will not import.
+REM, ***************************************************************************
+
+REM,----------------------------------------------------------------------------
+REM,                      CHARGE CODE Import
+REM,----------------------------------------------------------------------------
+REM, Charge Code Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CHARGECODE,HEADER,HCHCOD
+CHARGECODE_ID
+CHARGECODE_STATUS
+CHARGECODE_DESCRIPTION
+CHARGECODE_CURRENCY
+CHARGECODE_REVACCT
+CHARGECODE_DISTCODE
+CHARGECODE_TYPE
+CHARGECODE_TAXABLE	
+CHARGECODE_FREIGHT
+CHARGECODE_CCTYPE
+CHARGECODE_COGSACCT
+CHARGECODE_ITEMCODE
+CHARGECODE_CALCMETHOD
+CHARGECODE_VALUE
+CHARGECODE_MAXBILLABLE
+CHARGECODE_PERC
+CHARGECODE_PA_PERIOD
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Charge Code Detail Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CHARGECODE,DETAIL,DCHCOD
+CCPL_CHARGECODE
+CCPL_LINENUM
+CCPL_FIXEDCHARGE
+CCPL_UNITPRICE
+CCPL_MAXUNITS
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM,                      One Time charges Information Import
+REM,----------------------------------------------------------------------------
+REM, One Time Charges Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,ONETIMECHARGES,HEADER,HOTC
+OTC_BILLINGGRPID
+OTC_CUSTID
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Charge Code Detail Information
+REM,----------------------------------------------------------------------------
+CONTEXT,ONETIMECHARGES,DETAIL,DOTC
+OTC_CI_PERSISTCHARGE
+OTC_CI_CHARGECODE   
+OTC_CI_DESCRIPTION  
+OTC_CI_CHARGEDATE   
+OTC_CI_DISTCODE     		
+OTC_CI_FIXEDCHARGE  
+OTC_CI_QUANTITY     
+OTC_CI_UNITPRICE    
+ENDCONTEXT

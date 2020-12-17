@@ -1,0 +1,108 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                          FIXED ASSETS MODULE
+REM,                        DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,FADEPR             ,C:\MIP Share\Import\Fixed Width Samples\FACustDe.txt
+FILE,FATYPE             ,C:\MIP Share\Import\Fixed Width Samples\FAType.txt
+FILE,DESGCODES          ,C:\MIP Share\Import\Fixed Width Samples\FADesign.txt
+FILE,ASSETS             ,C:\MIP Share\Import\Fixed Width Samples\FACode.txt
+REM,----------------------------------------------------------------------------
+REM,           ContextID Position
+REM,----------------------------------------------------------------------------
+CONTEXTIDPOSITION,1,10
+REM,----------------------------------------------------------------------------
+REM,                            Asset Type Import
+REM,----------------------------------------------------------------------------
+REM,              Fixed Asset Data for Asset Type
+REM,----------------------------------------------------------------------------
+CONTEXT,FATYPE,HEADER,HASSETTYPE
+FATM_TYPEID,11,15
+FATM_STATUS,26,2,A
+FATM_DESCRIP,28,30
+FATM_DEPRCODE,58,15
+FATM_SW_DEPRCODE,73,15
+FATM_DISTCODE,88,6
+FATM_EXPCODE,94,6
+FATM_ADCODE,100,6
+FATM_ASSETCODE,106,6
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                          Designation Import
+REM,----------------------------------------------------------------------------
+REM, Acquisition, Location, Responsibility & Valuation Code Information
+REM,----------------------------------------------------------------------------
+CONTEXT,DESGCODES,HEADER,HDESIG
+MTNDSG_CODETYPE,11,15
+MTNDSG_CODEID,26,15
+MTNDSG_STATUS,41,2,A
+MTNDSG_DESCRIP,43,30
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                        Asset Import
+REM,----------------------------------------------------------------------------
+REM, FACode.txt     Fixed Asset Data for Assets
+REM,----------------------------------------------------------------------------
+CONTEXT,ASSETS,HEADER,HASSET
+ASSET_ID,11,15
+ASSET_STATUS,26,2,A
+ASSET_DESCRIPTION,28,30
+ASSET_CATEGORY,58,15
+ASSET_TAG,73,10
+ASSET_ORGASSETID,83,15
+ASSET_TAXABLE,98,2,0
+ASSET_ACQCODE,100,15
+ASSET_RESCODE,115,15
+ASSET_VALCODE,130,15
+ASSET_LOCCODE,145,15
+ASSET_TYPE_ID,160,15
+ASSET_COST,175,11,0,2
+ASSET_SALVAGE,186,11,0,2
+ASSET_BEGDEPRDATE,208,8
+ASSET_LASTDEPRDATE,216,8
+ASSET_ACCMDEPRAMT,224,11,0,2
+ASSET_MONTHSDEPR,235,4,0,0
+ASSET_MAINTDATE,239,8
+ASSET_WARRANTY,247,60
+ASSET_MODEL,307,40
+ASSET_SERIAL,347,40
+ASSET_PAYEE,387,20
+ASSET_DOCNUM,407,40
+ASSET_ACQDATE,447,8
+ASSET_PONUM,455,15
+ASSET_CODE,470,6
+ASSET_LIFE,476,4,0,0
+ASSET_REPLACECOST,480,11,0,2
+ASSET_ZEROBV,491,1,0
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                         Depreciation Code Import
+REM,----------------------------------------------------------------------------
+REM,          Fixed Asset Data for Custom Depreciation Codes
+REM,----------------------------------------------------------------------------
+CONTEXT,FADEPR,HEADER,HDEPRCODE
+DEPR_CODEID,11,15
+DEPR_STATUS,26,2,A
+DEPR_DESCRIP,28,30
+DEPR_METHOD,58,6
+DEPR_FAMOUNT,64,11,0,2
+DEPR_PERCENT,75,9,0,6
+ENDCONTEXT
+CONTEXT,FADEPR,DETAIL,DDEPRCODE
+DEPR_DET_YEAR,11,4
+DEPR_DET_PERC,15,9,0,6
+DEPR_DET_NOTE,24,30
+ENDCONTEXT
