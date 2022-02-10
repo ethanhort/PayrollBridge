@@ -1,0 +1,85 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                         SampleT3.def
+REM,                    DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXT IDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,SESSION, C:\MIP Share\Import\Fixed Width Samples\T3_CDCR.txt
+
+CONTEXTIDPOSITION,1,6
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into the system are Cash Disbursements (CD),
+REM, Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), A/P Invoices (API),
+REM, A/P Credit Memos (APM), A/P Manual Checks (APC), A/R Bills (ARB), 
+REM, A/R Credit Memos (ARM), A/R Receipts (ARC), Encumbrances (ENC), and 
+REM, Encumbrance Liquidations (ENL).
+REM, ----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+REM, 1 - (Nonprofit/Government Series)Reads Session line, Header Doc line and 
+REM,      Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+REM,----------------------------------------------------------------------------
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,1,6
+SESSION_STATUS,9,2
+SESSION_DESCRIPTION,133,30,Imported Session
+SESSION_SESSIONDATE,24,10
+SESSION_TRANSSOURCEID,34,3
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,1,6
+TEDOC_TRANSOURCE,34,3
+TEDOC_DOCNUM,38,6
+TEDOC_DESCRIPTION,12,12
+TEDOC_PLAYER_ID,45,10
+TEDOC_PLAYERTYPE,55,1
+TEDOC_DOCDATE,24,10
+TEDOC_DUEDATE,56,8
+TEDOC_1099TYPE,119,5
+TEDOC_ADDRESS_ID,124,15
+REM,TEDOC_MISCINFO
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,1,6
+TETRANS_DOCNUM,38,6
+TETRANS_DESCRIPTION,12,12
+TETRANS_ENTRY_TYPE,65,1,N
+TETRANS_EFFECTIVEDATE,24,10
+TETRANS_SEGMENT_GL,67,5
+TETRANS_SEGMENT_Fund,74,2
+TETRANS_SEGMENT_Grant,78,3
+TETRANS_SEGMENT_Progr,83,3
+TETRANS_SEGMENT_Dept,88,3
+TETRANS_SEGMENT_117,93,1
+TETRANS_DEBIT,96,11,0,2
+TETRANS_CREDIT,108,11,0,2
+ENDCONTEXT
+

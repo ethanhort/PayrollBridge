@@ -1,0 +1,4 @@
+HSESSN GT1001  BPGT Exp #1001 on 09/23/2005    09232004JV 
+HDOC   GT1001  09032005            JV 09032004GiftTraq transactions summarized for date 09032005!         1
+DDOC   GT1001  09032005            JV Transactions summarized by accounting date!                 0903200500000000205400000000000000001100101101
+DDOC   GT1001  09032005            JV Transactions summarized by accounting date!                 09032005000000000000000000000020540045001011011011011

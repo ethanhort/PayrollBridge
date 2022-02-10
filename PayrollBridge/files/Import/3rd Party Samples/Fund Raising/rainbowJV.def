@@ -1,0 +1,52 @@
+REM,----------------------------------------------------------------
+REM,                         KTS
+REM,               Rainbow Journal Vouchers
+REM,----------------------------------------------------------------
+
+FILE,SESSION,	C:\MIP Share\
+
+TRANSACTION_READ,1
+
+CONTEXTIDPOSITION,1,7
+
+REM, --------------------------------------------------
+REM, Session Header Information
+REM, --------------------------------------------------
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,8,8
+SESSION_TRANSSOURCEID,56,3
+SESSION_SESSIONDATE,48,8
+SESSION_DESCRIPTION,18,30
+SESSION_STATUS,16,2
+ENDCONTEXT
+
+REM, --------------------------------------------------
+REM, Document Header Information
+REM, --------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,8,8
+TEDOC_TRANSOURCE,36,3
+TEDOC_DOCNUM,16,20
+TEDOC_DOCDATE,39,8
+TEDOC_DESCRIPTION,47,60
+ENDCONTEXT
+
+REM, --------------------------------------------------
+REM, Document Transaction Lines Information
+REM, --------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,8,8
+TETRANS_DOCNUM,16,20
+TETRANS_TRANSOURCE,36,3
+TETRANS_DESCRIPTION,39,60
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,256,8,03312005
+TETRANS_SEGMENT_GL,135,5
+TETRANS_SEGMENT_Fund,140,2
+TETRANS_SEGMENT_Grant,142,3
+TETRANS_SEGMENT_Progr,145,3
+TETRANS_SEGMENT_Dept,148,3
+TETRANS_SEGMENT_117,151,1
+TETRANS_DEBIT,107,14,0,2
+TETRANS_CREDIT,121,14,0,2
+ENDCONTEXT

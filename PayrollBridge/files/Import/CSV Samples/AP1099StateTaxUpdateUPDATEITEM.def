@@ -1,0 +1,54 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                  AP1099StateTaxUpdateUPDATEITEM.Def
+REM,                      ACCOUNTS PAYABLE MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+FILE,VENDOR,,UPDATEITEM
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM, *************************************************************************
+REM, If you are importing Default GL and Distribution codes for a vendor,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or you vendor will not import.
+REM, *************************************************************************
+
+REM,--------------------------------------------------------------------------
+REM,                      Vendor Information Import
+REM,--------------------------------------------------------------------------
+REM, Vendor Header Information
+REM,--------------------------------------------------------------------------
+CONTEXT,VENDOR,HEADER,HVEND
+VENDOR_ID,2
+VENDOR_STATUS,3
+VENDOR_NAME,4
+VENDOR_ADDRESS,5
+VENDOR_CITY,6
+VENDOR_STATE,7
+VENDOR_ZIP,8
+VENDOR_MISC1099,9
+VENDOR_STATETAXWITHHELD,10
+VENDOR_1099STATE,11
+VENDOR_STATETAXID,12
+VENDOR_NAMECONTROL,13
+ENDCONTEXT
+
+
+

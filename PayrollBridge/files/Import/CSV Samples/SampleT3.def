@@ -1,0 +1,87 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, to fail.
+REM,----------------------------------------------------------------------------
+REM,                         SampleT3.def
+REM,                    DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXT IDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,SESSION, C:\MIP SHARE\Import\CSV Samples\T3_trans.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+SEGMENTNOTSTRING
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into the system are 
+REM, Cash Disbursements (CD), Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), 
+REM, A/P Invoices (API), A/P Credit Memos (APM), A/P Manual Checks (APC), 
+REM, A/R Bills (ARB), A/R Credit Memos (ARM), A/R Receipts - Receipt (ARC), A/R Receipts - Prepayments (ARP), 
+REM, Encumbrances (ENC), and Encumbrance Liquidations (ENL).
+REM, ----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+REM, 1 - (NPS)Reads Session line, Header Doc line and Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+REM,----------------------------------------------------------------------------
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,1
+SESSION_STATUS,2
+SESSION_DESCRIPTION,3,Imported Session
+SESSION_SESSIONDATE,4,,MM/DD/YYYY
+SESSION_BUDGET_VERSION,21
+SESSION_TRANSSOURCEID,5
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,1
+TEDOC_TRANSOURCE,5
+TEDOC_DOCNUM,6
+TEDOC_DESCRIPTION,3
+TEDOC_PLAYER_ID,7
+TEDOC_PLAYERTYPE,8
+TEDOC_1099TYPE,9
+TEDOC_ADDRESS_ID,10
+TEDOC_DOCDATE,4,,MM/DD/YYYY
+TEDOC_DUEDATE,4,,MM/DD/YYYY
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,1
+TETRANS_DOCNUM,6
+TETRANS_DESCRIPTION,3
+TETRANS_ENTRY_TYPE,11,N
+TETRANS_EFFECTIVEDATE,4,,MM/DD/YYYY
+TETRANS_SEGMENT_GL,12
+TETRANS_SEGMENT_Fund,13
+TETRANS_SEGMENT_Grant,14
+TETRANS_SEGMENT_Progr,15
+TETRANS_SEGMENT_Dept,16
+TETRANS_SEGMENT_117,17
+TETRANS_1099BOX,18
+TETRANS_DEBIT,19,,,,,2
+TETRANS_CREDIT,20,,,,2
+ENDCONTEXT
+

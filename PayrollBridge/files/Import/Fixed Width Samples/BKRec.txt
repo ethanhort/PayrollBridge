@@ -1,0 +1,10 @@
+/* The "POS PURCHASE" and the "ATM" lines are examples of import */
+/* lines that will fail.                                         */
+/* HBKREC 11001 01/31/2017            -21.63           POS PURCHASE - 19860 RESEARCH */
+/* HBKREC 11001 01/31/2017            -40.00           ATM WITHDRAWAL-ANDERSON */
+HBKREC 11001 01/31/2017 30262      -17093.46        CHECK                         
+HBKREC 11001 01/31/2017 30263      -3327.00         CHECK                         
+HBKREC 11001 01/31/2017 30264      -1758.15         CHECK                         
+HBKREC 11001 01/31/2017 0104002    1456.00          DEPOSIT
+
+

@@ -1,0 +1,14 @@
+HSESSN GT1026  BPRB Exp #1026 on 04/04/2005    09042005JV 
+HDOC   GT1026  03012005i           JV 03012005Rainbow transactions summarized for date 03012005!          5
+DDOC   GT1026  03012005i           JV Transactions summarized by accounting date!                 0301200500000000000500000000000000001100101101
+DDOC   GT1026  03012005i           JV Transactions summarized by accounting date!                 03012005000000000000000000000000050045001011011011011
+HDOC   GT1026  05152005i           JV 05152005Rainbow transactions summarized for date 05152005!          5
+DDOC   GT1026  05152005i           JV Transactions summarized by accounting date!                 0515200500000000320932000000000000001100101101
+DDOC   GT1026  05152005i           JV Transactions summarized by accounting date!                 05152005000000000000000000000033707045001011011011011
+DDOC   GT1026  05152005i           JV Transactions summarized by accounting date!                 05152005000000000161380000000000000045001011011011011
+HDOC   GT1026  05312005i           JV 05312005Rainbow transactions summarized for date 05312005!          5
+DDOC   GT1026  05312005i           JV Transactions summarized by accounting date!                 0531200500000000273838000000000000001100101101
+DDOC   GT1026  05312005i           JV Transactions summarized by accounting date!                 05312005000000000000000000000027383845001011011011011
+HDOC   GT1026  06062005i           JV 06062005Rainbow transactions summarized for date 06062005!          5
+DDOC   GT1026  06062005i           JV Transactions summarized by accounting date!                 0606200500000000264638000000000000001100101101
+DDOC   GT1026  06062005i           JV Transactions summarized by accounting date!                 06062005000000000000000000000026463845001011011011011

@@ -1,0 +1,6 @@
+HSALESORD,SO300,1/5/2017,import test,1,Q,AAA,<Billing>,,1/10/2017,UPS,468,Cash,457.75,11001,54321
+DSALESORD,Class,,10,,,1,0,,,,,,,,
+DSALESORD,Shipping,Each,1,,,2,0,,,,,,,,
+HSALESORD,SO301,1/5/2017,import test,0,S,AAA,<Billing>,,1/10/2017,UPS,468,Account,,,54322
+DSALESORD,Class,,20,,45.00,1,0,,,,,,,,
+DSALESORD,Shipping,Each,1,,,2,0,,,,,,,,

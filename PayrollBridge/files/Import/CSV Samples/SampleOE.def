@@ -1,0 +1,59 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                        ORDER ENTRY MODULE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,----------------------------------------------------------------------------
+FILE,OENTRY, C:\MIP Share\Import\CSV Samples\order.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+
+REM,----------------------------------------------------------------------------
+REM,                        Order Entry Import
+REM,----------------------------------------------------------------------------
+REM, ***************************************************************************
+REM, The customers and charge codes must be entered into the database 
+REM, through the Maintain menu or through import before importing the sales order.
+REM, ***************************************************************************
+
+REM,----------------------------------------------------------------------------
+REM,                      Order Entry Information Import
+REM,----------------------------------------------------------------------------
+REM, Order Entry Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,OENTRY,HEADER,HSALESORD
+SALESORD_NUMBER,2
+SALESORD_DATE,3,,MM/DD/YYYY
+SALESORD_COMMENTS,4
+SALESORD_CASHCUSTOMER,5
+SALESORD_ORDERTYPE,6
+SALESORD_CUSTID,7
+SALESORD_SHIPADDRCODE,8
+SALESORD_SALESTAXCODE,9
+SALESORD_REQSHIPDATE,10,,MM/DD/YYYY
+SALESORD_SHIPMETHOD,11
+SALESORD_CUSTPONUMBER,12
+SALESORD_PMTMETHOD,13
+SALESORD_AMTRECEIVED,14,0,,,,2
+SALESORD_CASHGLACCT,15
+SALESORD_DEPOSITNUM,16
+ENDCONTEXT
+CONTEXT,OENTRY,DETAIL,DSALESORD
+SALESORD_DTL_CHARGECODE,2
+SALESORD_DTL_QTYORDER,4
+SALESORD_DTL_FIXPRICE,5,0,,,,2
+SALESORD_DTL_SALESPRICE,6,0,,,,2
+SALESORD_DTL_LINENUM,7
+SALESORD_DTL_SENDTOFULFILLMENT,8
+ENDCONTEXT

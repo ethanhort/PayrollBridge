@@ -1,0 +1,66 @@
+REM,----------------------------------------------------------------------------
+REM,                         SampleT3.def
+REM,                    Abra Summary Entry
+REM,----------------------------------------------------------------------------
+
+REM,------------------------------------------------------------------------------
+FILE,SESSION,
+
+CONTEXTIDPOSITION,1
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into the system are Cash Disbursements (CD),
+REM, Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), A/P Invoices (API),
+REM, A/P Credit Memos (APM), A/P Manual Checks (APC), A/R Bills (ARB), 
+REM, A/R Credit Memos (ARM), A/R Receipts (ARC), Encumbrances (ENC), and Encumbrance 
+REM, Liquidations (ENL).
+REM, ----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+REM, 1 - (Nonprofit/Government Series)Reads Session line, Header Doc line and 
+REM,      Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+REM,----------------------------------------------------------------------------
+
+TRANSACTION_READ,3
+FILETYPE,CSV
+USEDISTCODE
+CLEANLINE_READ
+APPLY_OFFSETS
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,1,
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,5
+SESSION_SESSIONDATE,2,x,MMDDYYYY
+SESSION_TRANSSOURCEID,,CD
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,1
+TEDOC_TRANSOURCE,,CD
+TEDOC_DOCNUM,1
+TEDOC_DESCRIPTION,5
+TEDOC_DOCDATE,2,x,MMDDYYYY
+REM, TEDOC_PLAYER_ID,3
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,1
+TETRANS_DOCNUM,2
+TETRANS_DESCRIPTION,5
+TETRANS_ENTRY_TYPE,,N
+TETRANS_EFFECTIVEDATE,2,x,MMDDYYYY
+TETRANS_SEGMENT_GL,3,,,1,5
+TETRANS_DISTCODE,4
+TETRANS_DEBIT,6,0,,,,0
+REM, TETRANS_CREDIT,6,0,,,,0
+ENDCONTEXT

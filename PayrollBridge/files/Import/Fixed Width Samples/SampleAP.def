@@ -1,0 +1,88 @@
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                      ACCOUNTS PAYABLE MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,--------------------------------------------------------------------------
+FILE,VENDOR, C:\MIP Share\Import\Fixed Width Samples\Vndr.txt
+
+CONTEXTIDPOSITION,1,6
+
+REM, *************************************************************************
+REM, If you are importing Default GL and Distribution codes for a vendor,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or your vendor will not import.
+REM, *************************************************************************
+
+REM,--------------------------------------------------------------------------
+REM,                      Vendor Information Import
+REM,--------------------------------------------------------------------------
+REM, Vendor Header Information
+REM,--------------------------------------------------------------------------
+CONTEXT,VENDOR,HEADER,HVEND
+VENDOR_ID,7,15
+VENDOR_STATUS,159,1,A
+VENDOR_NAME,38,45
+VENDOR_CLASS,24,6
+VENDOR_TYPE,31,5
+VENDOR_ADDRESS,162,60
+VENDOR_CITY,224,30
+VENDOR_STATE,256,2
+VENDOR_ZIP,260,10
+VENDOR_PHONE,368,15
+VENDOR_FAX,383,15
+VENDOR_FIRSTNAME,272,30
+VENDOR_MIDDLENAME,303,1
+VENDOR_LASTNAME,304,30
+VENDOR_TITLE,270,2
+VENDOR_POSITION,336,20
+VENDOR_EMAIL,400,30
+VENDOR_NETDUEDAYS,85,2
+VENDOR_GLCODE,89,6
+VENDOR_DISTCODE,97,6
+VENDOR_MISC1099,105,2
+VENDOR_TAXIDTYPE,152,1,F
+VENDOR_TAXID,141,11
+VENDOR_NAMECONTROL,452,4
+VENDOR_PROPNAME,109,30
+VENDOR_POSAMEAS,398,1,1
+VENDOR_POADDRESS,162,60
+VENDOR_POCITY,224,30
+VENDOR_POSTATE,256,2
+VENDOR_POZIP,260,10
+VENDOR_POPHONE,368,15
+VENDOR_POFAX,383,15
+VENDOR_POFIRSTNAME,272,30
+VENDOR_POMIDDLENAME,303,1
+VENDOR_POLASTNAME,304,30
+VENDOR_POTITLE,270,2
+VENDOR_POPOSITION,336,20
+VENDOR_POEMAIL,400,30
+VENDOR_STATETAXWITHHELD,431,1
+VENDOR_1099STATE,433,2
+VENDOR_STATETAXID,436,11
+VENDOR_1099TYPEDEFAULT,447,5
+VENDOR_MISC1099BOXNUM,460,7
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Detail lines or 1099 Adjustments, if applicable
+REM,----------------------------------------------------------------------------
+REM, CONTEXT,VENDOR,DETAIL,DVEND
+REM, VENDOR_PHYID
+REM, VENDOR_YEAR
+REM, VENDOR_1099TYPEID
+REM, VENDOR_BOXNUMID
+REM, VENDOR_AMOUNT
+REM, ENDCONTEXT
+

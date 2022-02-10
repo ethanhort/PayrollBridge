@@ -1,0 +1,58 @@
+REM, -----------------------------------------------------------
+REM, 	                          ANDAR
+REM,             Import Cash Receipt Transactions
+REM, -----------------------------------------------------------
+REM, Currently the definition file is set up to use:
+REM, Document number equals SessionID
+REM, MIP transaction description is field 2
+REM, Deposit Number is ANDAR Envelope# (pos 7)
+REM, -----------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION
+
+FILETYPE,CSV
+
+DISCARDFIRSTNRECORDS,1
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,,AUTONUM
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,,Import session from ANDAR
+SESSION_SESSIONDATE,22,,yyyymmdd
+SESSION_TRANSSOURCEID,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION
+TEDOC_TRANSOURCE,,CR
+TEDOC_DOCNUM
+TEDOC_DESCRIPTION,,Import Document from ANDAR
+TEDOC_PLAYER_ID
+TEDOC_DOCDATE,22,,yyyymmdd
+TEDOC_DUEDATE
+TEDOC_MISCINFO,7
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID
+TETRANS_DOCNUM
+TETRANS_DESCRIPTION,2,Import ANDAR transactions
+TETRANS_ENTRY_TYPE,,N
+TETRANS_EFFECTIVEDATE,22,,yyyymmdd
+TETRANS_SEGMENT_GL,36,,,8,5
+TETRANS_SEGMENT_Fund,36,,,1,2
+TETRANS_SEGMENT_Grant,36,,,4,3
+TETRANS_SEGMENT_Progr,36,,,14,3
+TETRANS_SEGMENT_Dept,36,,,18,3
+TETRANS_SEGMENT_117,36,,,22,1
+TETRANS_DEBIT,13,0,,,,0
+TETRANS_CREDIT,13,0,,,,0
+TETRANS_1099BOX
+TETRANS_MATCH_DOCNUM
+ENDCONTEXT
+

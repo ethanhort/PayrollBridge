@@ -1,0 +1,45 @@
+HSESSNJVSession 2015 JV 06012017Session entered on 6/15/17    BP 
+HDOC  JVSession 2015 JV 06012017Journal Voucher               06012017                               JV0001                        NOREV
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0001         01 101 40001 101 101 1 00000050000 00000000000
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0001         01 101 40001 201 101 1 00000000000 00000040000
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0001         01 101 40001 301 101 1 00000000000 00000010000
+HDOC  JVSession 2015 JV 06012017Journal Voucher               06012017                               JV0002                        NOREV
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0002         01 101 40001 101 101 1 00000090000 00000000000
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0002         01 101 40001 101 201 1 00000000000 00000050000
+DDOC  JVSession 2015  N 06012017Transaction Line                                     JV0002         01 101 40001 101 301 1 00000000000 00000040000
+HSESSNCDSession 2015 CD 06012017Session entered on 6/15/17    BP
+HDOC  CDSession 2015 CD 06012017Cash Disbursement             06012017ABC            VMain           CD0001                   MISC
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0001         01 101 40001 101 101 1 00000050000 00000000000 MISC-07
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0001         01 101 40001 201 101 1 00000000000 00000040000 MISC-07
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0001         01 101 11001 301 101 1 00000000000 00000010000 MISC-07
+HDOC  CDSession 2015 CD 06012017Cash Disbursement             06012017ABC            V               CD0002                   MISC
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0002         01 101 40001 101 101 1 00000090000 00000000000 MISC-07
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0002         01 101 40001 101 201 1 00000000000 00000050000 MISC-07
+DDOC  CDSession 2015  N 06012017Transaction Line                                     CD0002         01 101 11001 101 301 1 00000000000 00000040000 MISC-07
+HSESSNCRSession 2015 CR 06012017Session entered on 6/15/17    BP
+HDOC  CRSession 2015 CR 06012017Cash Receipt                  06012017ABC HEALTH     C               CR0001         
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0001         01 101 11001 101 101 1 00000050000 00000000000
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0001         01 101 40001 201 101 1 00000000000 00000040000
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0001         01 101 40001 301 101 1 00000000000 00000010000
+HDOC  CRSession 2015 CR 06012017Cash Receipt                  06012017ABC HEALTH     C               CR0002         
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0002         01 101 11001 101 101 1 00000090000 00000000000
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0002         01 101 40001 101 201 1 00000000000 00000050000
+DDOC  CRSession 2015  N 06012017Transaction Line                                     CR0002         01 101 40001 101 301 1 00000000000 00000040000
+HSESSNSession BD01   BD 06012017Session entered on 6/15/17    BP Original
+HDOC  Session BD01   BD 06012017Budget Entry                  06012017                               BD0001
+DDOC  Session BD01      06012017Transaction Line                                     BD0001         01 101 40001 101 101 1 00000050000 00000000000
+DDOC  Session BD01      06012017Transaction Line                                     BD0001         01 101 40001 201 101 1 00000700000 00000000000
+DDOC  Session BD01      06012017Transaction Line                                     BD0001         01 101 40001 301 101 1 00000060000 00000000000
+HDOC  Session BD01   BD 06012017Budget Entry                  06012017                               BD0002
+DDOC  Session BD01      06012017Transaction Line                                     BD0002         01 101 40001 101 101 1 00000090000 00000000000
+DDOC  Session BD01      06012017Transaction Line                                     BD0002         01 101 40001 101 201 1 00000004000 00000000000
+DDOC  Session BD01      06012017Transaction Line                                     BD0002         01 101 40001 101 301 1 00000110000 00000000000
+HSESSNJVSession 2015 JV 12152017Session entered on 6/15/17    BP 
+HDOC  JVSession 2015 JV 12152017Journal Voucher               12152017                               JV0001-Rev                    REV  12162017
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0001-Rev     01 101 40001 101 101 1 00000050000 00000000000
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0001-Rev     01 101 40001 201 101 1 00000000000 00000040000
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0001-Rev     01 101 40001 301 101 1 00000000000 00000010000
+HDOC  JVSession 2015 JV 12152017Journal Voucher               12152017                               JV0002-NoRev                  NOREV
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0002-NoRev   01 101 40001 101 101 1 00000090000 00000000000
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0002-NoRev   01 101 40001 101 201 1 00000000000 00000050000
+DDOC  JVSession 2015  N 12152017Transaction Line                                     JV0002-NoRev   01 101 40001 101 301 1 00000000000 00000040000
