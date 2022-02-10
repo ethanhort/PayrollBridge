@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HPO,Reference,DC062309-1,06/23/2017,Ready To Print,July 2017 Head Start Supplies,ABC,,1,1,<Main>,<Main>,Dana Jeffries,Annabelle Martin,FOB,Local Delivery,Sample Purchase Order Import With Seperate Coding
 DDETAIL,1,Day Care Supplies,D1005,,Substitute Allowed,,,,,,,06242017,06242017,Head Start,Verbal
 DDETAIL,2,Day Care Supplies,D1015,,Substitute Allowed,,,,,,,06242017,06242017,Head Start,Verbal
@@ -5,3 +6,12 @@ DDETAIL,3,,,Special Discount,,64001,Day Care,,,1,-5.55,,,,
 DCODING,1,06032017,64001,01,101,101,101,1,60.00
 DCODING,2,06032017,64001,01,101,101,101,1,660.00
 DCODING,3,06032017,64001,01,101,101,101,1,-5.55
+=======
+HPO,Reference,DC062309-1,06/23/2017,Ready To Print,July 2017 Head Start Supplies,ABC,,1,1,<Main>,<Main>,Dana Jeffries,Annabelle Martin,FOB,Local Delivery,Sample Purchase Order Import With Seperate Coding
+DDETAIL,1,Day Care Supplies,D1005,,Substitute Allowed,,,,,,,06242017,06242017,Head Start,Verbal
+DDETAIL,2,Day Care Supplies,D1015,,Substitute Allowed,,,,,,,06242017,06242017,Head Start,Verbal
+DDETAIL,3,,,Special Discount,,64001,Day Care,,,1,-5.55,,,,
+DCODING,1,06032017,64001,01,101,101,101,1,60.00
+DCODING,2,06032017,64001,01,101,101,101,1,660.00
+DCODING,3,06032017,64001,01,101,101,101,1,-5.55
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

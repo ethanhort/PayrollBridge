@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "/* The ""POS PURCHASE"" and the ""ATM"" lines are examples of import */",,,,,
 /* lines that will fail.                                         */,,,,,
 /* HBKREC,11001,12/31/2017,,-285.63, POS PURCHASE - 19860 RESEARCH  */,,,,,
@@ -7,3 +8,14 @@ HBKREC,11001,12/31/2017,100456,-73.2,CHECK
 HBKREC,11001,12/31/2017,100479,-590.55,CHECK
 HBKREC,11001,12/31/2017,100480,-81.12,CHECK
 HBKREC,11001,12/31/2017,1104003,10504,DEPOSIT
+=======
+"/* The ""POS PURCHASE"" and the ""ATM"" lines are examples of import */",,,,,
+/* lines that will fail.                                         */,,,,,
+/* HBKREC,11001,12/31/2017,,-285.63, POS PURCHASE - 19860 RESEARCH  */,,,,,
+/* HBKREC,11001,12/31/2017,,-60, ATM WITHDRAWAL-ANDERSON  */,,,,,
+HBKREC,11001,12/31/2017,100455,-595.17,CHECK
+HBKREC,11001,12/31/2017,100456,-73.2,CHECK
+HBKREC,11001,12/31/2017,100479,-590.55,CHECK
+HBKREC,11001,12/31/2017,100480,-81.12,CHECK
+HBKREC,11001,12/31/2017,1104003,10504,DEPOSIT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

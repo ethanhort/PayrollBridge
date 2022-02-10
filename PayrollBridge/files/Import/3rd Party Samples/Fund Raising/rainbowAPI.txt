@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HSESSN           API-02-191BPRainbow Designations Payout A/P export run                  05022005API
 HDOC             API-02-191         177807/001GAPI05022005ABC                 Gross Distribution                                          
 DDOC             API-02-191         177807/001G                    APIGross Distribution                                          05022005         50000           0002100101101
@@ -11,3 +12,18 @@ DDOC             API-02-191         177807/003G                    APIGross Dist
 HDOC             API-02-191         177807/004GAPI05022005TRANS               Gross Distribution                                          
 DDOC             API-02-191         177807/004G                    APIGross Distribution                                          05022005         50000           0002100101101
 DDOC             API-02-191         177807/004G                    APIGross Distribution                                          05022005           000         500002000001101
+=======
+HSESSN           API-02-191BPRainbow Designations Payout A/P export run                  05022005API
+HDOC             API-02-191         177807/001GAPI05022005ABC                 Gross Distribution                                          
+DDOC             API-02-191         177807/001G                    APIGross Distribution                                          05022005         50000           0002100101101
+DDOC             API-02-191         177807/001G                    APIGross Distribution                                          05022005           000         500002000001101
+HDOC             API-02-191         177807/002GAPI05022005BELL                Gross Distribution                                          
+DDOC             API-02-191         177807/002G                    APIGross Distribution                                          05022005         62500           0002100101101
+DDOC             API-02-191         177807/002G                    APIGross Distribution                                          05022005           000         625002000001101
+HDOC             API-02-191         177807/003GAPI05022005ISInc               Gross Distribution                                          
+DDOC             API-02-191         177807/003G                    APIGross Distribution                                          05022005         87500           0002100101101
+DDOC             API-02-191         177807/003G                    APIGross Distribution                                          05022005           000         875002000001101
+HDOC             API-02-191         177807/004GAPI05022005TRANS               Gross Distribution                                          
+DDOC             API-02-191         177807/004G                    APIGross Distribution                                          05022005         50000           0002100101101
+DDOC             API-02-191         177807/004G                    APIGross Distribution                                          05022005           000         500002000001101
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

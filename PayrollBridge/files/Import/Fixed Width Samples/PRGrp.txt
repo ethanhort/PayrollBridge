@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HPrcGrp     W2   	AAnother Weekly Grp            W
+=======
+HPrcGrp     W2   	AAnother Weekly Grp            W
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

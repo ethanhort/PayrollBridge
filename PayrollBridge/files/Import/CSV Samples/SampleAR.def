@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -94,3 +95,101 @@ CUSTOMER_SHIPPHONE,15
 CUSTOMER_SHIPEMAIL,16
 CUSTOMER_SHIPFAX,17
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                     ACCOUNTS RECEIVABLE MODULE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,----------------------------------------------------------------------------
+FILE,CUSTOMER, C:\MIP Share\Import\CSV Samples\Cust.csv
+FILE,CUSTOMERSHIPADDR, C:\MIP Share\Import\CSV Samples\CustShipAddr.csv
+
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+
+REM,----------------------------------------------------------------------------
+REM,                    Accounts Receivable Import
+REM,----------------------------------------------------------------------------
+REM, ***************************************************************************
+REM, If you are importing Default GL and Distribution codes for a customer,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or your customer will not import.
+REM, ***************************************************************************
+
+REM,----------------------------------------------------------------------------
+REM,                      Customer Information Import
+REM,----------------------------------------------------------------------------
+REM, Customer Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CUSTOMER,HEADER,HCUST
+CUSTOMER_ID,2
+CUSTOMER_STATUS,3,A
+CUSTOMER_NAME,4
+CUSTOMER_CASHCUSTOMER,5
+CUSTOMER_WEBSITE,6
+CUSTOMER_RESALETAXID,7
+CUSTOMER_CLASS,8
+CUSTOMER_TYPE,9
+CUSTOMER_ADDRESS,10
+CUSTOMER_BILLINGCITY,11
+CUSTOMER_BILLINGSTATE,12
+CUSTOMER_BILLINGZIP,13
+CUSTOMER_BILLINGPHONE,14
+CUSTOMER_BILLINGFAX,15
+CUSTOMER_BILLINGTITLE,16
+CUSTOMER_BILLINGFIRSTNAME,17
+CUSTOMER_BILLINGMIDDLENAME,18
+CUSTOMER_BILLINGLASTNAME,19
+CUSTOMER_BILLINGPOSITION,20
+CUSTOMER_BILLINGEMAIL,21
+CUSTOMER_SERVICESAMEAS,22,1
+CUSTOMER_CREDITSTOP,23
+CUSTOMER_NETDUEDAYS,24
+CUSTOMER_DEFREVACCT,25
+CUSTOMER_DEFPREPAYACCT,26
+CUSTOMER_DISTCODE,27
+CUSTOMER_DISCACCT,28
+CUSTOMER_PAPER,29
+CUSTOMER_EMAIL,30
+CUSTOMER_EMAILADDR,31
+CUSTOMER_EMAILTEMPLATE,32
+CUSTOMER_STMTPAPER,33
+CUSTOMER_STMTEMAIL,34
+CUSTOMER_STMTEMAILADDR,35
+CUSTOMER_STMTEMAILTEMPLATE,36
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Customer Ship Address Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CUSTOMERSHIPADDR,HEADER,HCUSTSHIPADDR
+CUSTOMER_SHIPCUSTID,2
+CUSTOMER_SHIPADDRESS_ID,3
+CUSTOMER_SHIPADDRESS,4
+CUSTOMER_SHIPCITY,5
+CUSTOMER_SHIPSTATE,6
+CUSTOMER_SHIPZIP,7
+CUSTOMER_SHIPCOUNTRY,8
+CUSTOMER_SHIPTITLE,9
+CUSTOMER_SHIPFIRSTNAME,10
+CUSTOMER_SHIPMIDDLE_INITIAL,11
+CUSTOMER_SHIPLAST_NAME,12
+CUSTOMER_SHIPTAX_CODE,13
+CUSTOMER_SHIPPOSITION,14
+CUSTOMER_SHIPPHONE,15
+CUSTOMER_SHIPEMAIL,16
+CUSTOMER_SHIPFAX,17
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

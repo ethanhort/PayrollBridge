@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 HTS         GREEN Admin  D 10312017
 DTSEARN     GREEN Wages 080.00000000Pay
 DTSBENE     GREEN Health00000000.0000
 DTSBENE     GREEN Life  00000000.0000
 DTSLEAVE    GREEN Vac10
 DTSLEAVE    GREEN Sick3       0.5
+=======
+HTS         GREEN Admin  D 10312017
+DTSEARN     GREEN Wages 080.00000000Pay
+DTSBENE     GREEN Health00000000.0000
+DTSBENE     GREEN Life  00000000.0000
+DTSLEAVE    GREEN Vac10
+DTSLEAVE    GREEN Sick3       0.5
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 04302005  bat1             User descr DRAW_CR_ACCT       01-101-40001-101-101-1        0.00        10000.00    
 04302005  bat1             User descr DRAW_DR_ACCT       01-101-11001                  10000.00    0.00        
 04302005  bat1             User descr ESC_CR_ACCT        01-101-40101-101-101-1        0.00        10.00       
@@ -14,3 +15,21 @@
 04302005  bat1             User descr PRINADJ_DR_ACCT    01-101-11001                  0.00        33.00        
 04302005  bat1             User descr SVCFEE_CR_ACCT     01-101-45001-101-101-1        0.00        15.00       
 04302005  bat1             User descr SVCFEE_DR_ACCT     01-101-11001                  15.00       0.00        
+=======
+04302005  bat1             User descr DRAW_CR_ACCT       01-101-40001-101-101-1        0.00        10000.00    
+04302005  bat1             User descr DRAW_DR_ACCT       01-101-11001                  10000.00    0.00        
+04302005  bat1             User descr ESC_CR_ACCT        01-101-40101-101-101-1        0.00        10.00       
+04302005  bat1             User descr ESC_DR_ACCT        01-101-16900                  10.00       0.00        
+04302005  bat1             User descr INT_CR_ACCT        01-101-46001-101-101-1        0.00        12.70       
+04302005  bat1             User descr INT_DR_ACCT        01-101-11001                  12.70       0.00        
+04302005  bat1             User descr LATEFEE_CR_ACCT    01-101-45001-101-101-1        0.00        20.00       
+04302005  bat1             User descr LATEFEE_DR_ACCT    01-101-11001                  20.00       0.00        
+04302005  bat1             User descr MISC_CR_ACCT       01-101-44001-101-101-1        0.00        22.50       
+04302005  bat1             User descr MISC_DR_ACCT       01-101-11001                  22.50       0.00        
+04302005  bat1             User descr PRIN_CR_ACCT       01-101-40101-101-101-1        0.00        961.13      
+04302005  bat1             User descr PRIN_DR_ACCT       01-101-16900                  961.13      0.00        
+04302005  bat1             User descr PRINADJ_CR_ACCT    01-101-46001-101-101-1        33.00       0.00      
+04302005  bat1             User descr PRINADJ_DR_ACCT    01-101-11001                  0.00        33.00        
+04302005  bat1             User descr SVCFEE_CR_ACCT     01-101-45001-101-101-1        0.00        15.00       
+04302005  bat1             User descr SVCFEE_DR_ACCT     01-101-11001                  15.00       0.00        
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

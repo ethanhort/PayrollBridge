@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                           PDIC
 REM,                 Loan Portfolio Management
@@ -45,3 +46,52 @@ TETRANS_DEBIT,88,11,0,0
 TETRANS_CREDIT,100,11,0,0
 TETRANS_1099BOX
 ENDCONTEXT
+=======
+REM,----------------------------------------------------------------------------
+REM,                           PDIC
+REM,                 Loan Portfolio Management
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,11,15
+SESSION_STATUS,,,BP
+SESSION_DESCRIPTION,,,Imported Session from PDIC
+SESSION_SESSIONDATE,1,8
+SESSION_TRANSSOURCEID,,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,11,15
+TEDOC_TRANSOURCE,,,CR
+TEDOC_DOCNUM,11,15
+TEDOC_DESCRIPTION,,,Imported Document from PDIC
+TEDOC_PLAYER_ID
+TEDOC_DOCDATE,1,8
+TEDOC_DUEDATE
+TEDOC_MISCINFO
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,11,15
+TETRANS_DOCNUM,11,15
+TETRANS_DESCRIPTION,28,30
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,1,8
+TETRANS_SEGMENT_GL,65,5
+TETRANS_SEGMENT_Fund,58,2
+TETRANS_SEGMENT_Grant,61,3
+TETRANS_SEGMENT_Progr,71,3
+TETRANS_SEGMENT_Dept,75,3
+TETRANS_SEGMENT_117,79,1
+TETRANS_DEBIT,88,11,0,0
+TETRANS_CREDIT,100,11,0,0
+TETRANS_1099BOX
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

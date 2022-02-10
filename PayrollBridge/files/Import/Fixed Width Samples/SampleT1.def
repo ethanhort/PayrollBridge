@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -86,3 +87,93 @@ TETRANS_CREDIT,136,11,0,2
 TETRANS_1099BOX,148,10
 ENDCONTEXT
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                         	SampleT1.def
+REM,                    DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXT IDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,SESSION, C:\MIP Share\Import\Fixed Width Samples\T1_trans.txt
+
+CONTEXTIDPOSITION,1,6
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into the system are Cash Disbursements (CD),
+REM, Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), A/P Invoices (API),
+REM, A/P Credit Memos (APM), A/P Manual Checks (APC), A/R Bills (ARB), 
+REM, A/R Credit Memos (ARM), A/R Receipts (ARC) and Encumbrances (ENC).
+REM,----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+REM, 1 - (Nonprofit/Government Series)Reads Session line, Header Doc line and 
+REM,      Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+REM,----------------------------------------------------------------------------
+
+TRANSACTION_READ,1
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,7,14
+SESSION_STATUS,63,2,BP
+SESSION_DESCRIPTION,33,30,Imported Session
+SESSION_SESSIONDATE,25,8
+SESSION_BUDGET_VERSION,66,8
+SESSION_TRANSSOURCEID,22,3
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,7,14
+TEDOC_TRANSOURCE,22,3
+TEDOC_DOCNUM,102,15
+TEDOC_MISCINFO,117, 10
+TEDOC_DESCRIPTION,33,30
+TEDOC_PLAYER_ID,71,15
+TEDOC_PLAYERTYPE,86,1
+TEDOC_ADDRESS_ID,87,15
+TEDOC_DOCDATE,25,8
+TEDOC_DUEDATE,63,8
+TEDOC_1099TYPE,127,5
+TEDOC_REVERSE,                132, 5
+TEDOC_REVERSE_EFFECTIVE_DATE, 137, 8
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,7,14
+TETRANS_DOCNUM,86,15
+TETRANS_DESCRIPTION,33,30
+TETRANS_ENTRY_TYPE,22,2
+TETRANS_EFFECTIVEDATE,25,8
+TETRANS_SEGMENT_GL,108,5
+TETRANS_SEGMENT_Fund,101,2
+TETRANS_SEGMENT_Grant,104,3
+TETRANS_SEGMENT_Progr,114,3
+TETRANS_SEGMENT_Dept,118,3
+TETRANS_SEGMENT_117,122,1
+TETRANS_DEBIT,124,11,0,2
+TETRANS_CREDIT,136,11,0,2
+TETRANS_1099BOX,148,10
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

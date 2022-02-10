@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -82,3 +83,89 @@ TETRANS_CREDIT,7,,,,,0
 TETRANS_MATCH_DOCNUM,8
 ENDCONTEXT
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, to fail.
+REM,----------------------------------------------------------------------------
+REM,                         SampleT3ENL.def
+REM,                    DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXT IDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,SESSION, C:\MIP SHARE\Import\CSV Samples\T3ENL.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SEGMENTNOTSTRING
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into NPS are Cash Disbursements (CD),
+REM, Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), A/P Invoices (API),
+REM, A/P Credit Memos (APM), A/P Manual Checks (APC), A/R Bills (ARB), 
+REM, A/R Credit Memos (ARM), A/R Receipts (ARC), Encumbrances (ENC), and Encumbrance 
+REM, Liquidations (ENL).
+REM, ----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+REM, 1 - (NPS)Reads Session line, Header Doc line and Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+REM,----------------------------------------------------------------------------
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,2
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,,Encumbrance Lq
+SESSION_SESSIONDATE,4,,MM/DD/YY
+SESSION_TRANSSOURCEID,3
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,2
+TEDOC_TRANSOURCE,3
+TEDOC_DOCNUM,1
+TEDOC_DESCRIPTION,6
+TEDOC_PLAYER_ID,16
+TEDOC_PLAYERTYPE,,V
+TEDOC_DOCDATE,4,,MM/DD/YY
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,2
+TETRANS_DOCNUM,1
+TETRANS_DESCRIPTION,6
+TETRANS_ENTRY_TYPE,5,N
+TETRANS_EFFECTIVEDATE,4,,MM/DD/YY
+TETRANS_SEGMENT_GL,9
+TETRANS_SEGMENT_Fund,10
+TETRANS_SEGMENT_Grant,11
+TETRANS_SEGMENT_Progr,12
+TETRANS_SEGMENT_Dept,13
+TETRANS_SEGMENT_117,14
+TETRANS_DEBIT,7,,,,,0
+TETRANS_CREDIT,7,,,,,0
+TETRANS_MATCH_DOCNUM,8
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

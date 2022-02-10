@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 HEMAILTPLT,A/R Invoice,Invoices,nonprofit.org@help.com,,,A/R Invoice,Please see the attached invoice.
 HEMAILTPLT,Customer Statement,Statements,nonprofit.org@help.com,,,Customer Statement,Please see the attached statement.
 
+=======
+HEMAILTPLT,A/R Invoice,Invoices,nonprofit.org@help.com,,,A/R Invoice,Please see the attached invoice.
+HEMAILTPLT,Customer Statement,Statements,nonprofit.org@help.com,,,Customer Statement,Please see the attached statement.
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

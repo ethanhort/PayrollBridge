@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                         CAMS
 REM,                    Student Billing
@@ -42,3 +43,49 @@ TETRANS_DEBIT,112,11,0,2
 TETRANS_CREDIT,123,11,0,2
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                         CAMS
+REM,                    Student Billing
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,3,10
+SESSION_STATUS,,,BP
+SESSION_DESCRIPTION,,,Imported Session from CAMS
+SESSION_SESSIONDATE,16,6
+SESSION_TRANSSOURCEID,,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,3,10
+TEDOC_TRANSOURCE,,,CR
+TEDOC_DOCNUM,3,10
+TEDOC_DESCRIPTION,,,Imported Document from CAMS
+TEDOC_DOCDATE,16,6
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,3,10
+TETRANS_DOCNUM,3,10
+TETRANS_DESCRIPTION,50,30
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,16,6
+TETRANS_SEGMENT_GL,89,5
+TETRANS_SEGMENT_Fund,84,2
+TETRANS_SEGMENT_Grant,86,3
+TETRANS_SEGMENT_Progr,94,3
+TETRANS_SEGMENT_Dept,97,3
+TETRANS_SEGMENT_117,100,1
+TETRANS_DEBIT,112,11,0,2
+TETRANS_CREDIT,123,11,0,2
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -59,4 +60,67 @@ SALESORD_DTL_FIXPRICE
 SALESORD_DTL_SALESPRICE
 SALESORD_DTL_LINENUM
 SALESORD_DTL_SENDTOFULFILLMENT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                          MasterOE.Def
+REM,                        ORDER ENTRY MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+FILE,VENDOR, C:\MIP Share\Import\CSV Samples\order.csv,,C:\MIP Share\Import\CSV Samples\orderERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+SUPPRESSWARNINGS
+
+REM, *************************************************************************
+REM, Sales Orders may be imported as quotes or as sales orders.  If you import
+REM, the ordertype as a quote, no transactions will be created.  If you import 
+REM, the order type as a sales order, online transactions will be created.
+REM, *************************************************************************
+
+REM,--------------------------------------------------------------------------
+REM,                      Sales Order Entry Import
+REM,--------------------------------------------------------------------------
+REM, Sales Order Header Information
+REM,--------------------------------------------------------------------------
+CONTEXT,OENTRY,HEADER,HSALESORD
+SALESORD_NUMBER
+SALESORD_DATE
+SALESORD_COMMENTS
+SALESORD_CASHCUSTOMER
+SALESORD_ORDERTYPE
+SALESORD_CUSTID
+SALESORD_SHIPADDRCODE
+SALESORD_SALESTAXCODE
+SALESORD_REQSHIPDATE
+SALESORD_SHIPMETHOD
+SALESORD_CUSTPONUMBER
+SALESORD_PMTMETHOD
+SALESORD_AMTRECEIVED
+SALESORD_CASHGLACCT
+SALESORD_DEPOSITNUM
+ENDCONTEXT
+
+CONTEXT,OENTRYDETAIL,HEADER,DSALESORD
+SALESORD_DTL_CHARGECODE
+SALESORD_DTL_QTYORDER
+SALESORD_DTL_FIXPRICE
+SALESORD_DTL_SALESPRICE
+SALESORD_DTL_LINENUM
+SALESORD_DTL_SENDTOFULFILLMENT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git
 ENDCONTEXT

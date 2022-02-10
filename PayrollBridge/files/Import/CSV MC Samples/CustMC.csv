@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HCUST,State,Trn,BigBrotherEUR,Big Brothers Sisters of EUR,A,www.BigBrother.com,V6V 2X8,1370 International Place,Richmond,,BC,V6V 2X8,Dr,John,R,Bledsoe,ED,jbledsoe@brothersandsisters.org,604.524.5745,604.524.5487,0,30,46101,25001,Direct,BigBrother.com,1,0,EUR,0,Canada
+=======
+HCUST,State,Trn,BigBrotherEUR,Big Brothers Sisters of EUR,A,www.BigBrother.com,V6V 2X8,1370 International Place,Richmond,,BC,V6V 2X8,Dr,John,R,Bledsoe,ED,jbledsoe@brothersandsisters.org,604.524.5745,604.524.5487,0,30,46101,25001,Direct,BigBrother.com,1,0,EUR,0,Canada
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

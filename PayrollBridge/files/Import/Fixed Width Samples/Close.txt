@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 HCLAC   58001   07  30001
 HCLAC   58002   07  30001
 HCLAC   58003   07  30001
 HCLAC   58004   07  30001
+=======
+HCLAC   58001   07  30001
+HCLAC   58002   07  30001
+HCLAC   58003   07  30001
+HCLAC   58004   07  30001
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

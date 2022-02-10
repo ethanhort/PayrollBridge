@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 HDESIG,A,Trade,A,Trade                     
 HDESIG,L,SalOff,A,Sales Offices        
 HDESIG,R,HumRes,A,Human Resources Department     
 HDESIG,V,App,A,Appraisal
+=======
+HDESIG,A,Trade,A,Trade                     
+HDESIG,L,SalOff,A,Sales Offices        
+HDESIG,R,HumRes,A,Human Resources Department     
+HDESIG,V,App,A,Appraisal
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

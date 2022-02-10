@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Date,Reference,Number of Distributions,G/L Account,Description,Amount
 07/18/05,From ChurchWorks,2,0110111001,,100.00
 07/18/05,From ChurchWorks,2,01101400011011011,,-100
@@ -23,3 +24,30 @@ Date,Reference,Number of Distributions,G/L Account,Description,Amount
 07/18/05,From ChurchWorks,2,01101400011011011,,-20000
 07/18/05,From ChurchWorks,2,0110111001,,50.00
 07/18/05,From ChurchWorks,2,01101400011011011,,-50
+=======
+Date,Reference,Number of Distributions,G/L Account,Description,Amount
+07/18/05,From ChurchWorks,2,0110111001,,100.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-100
+07/18/05,From ChurchWorks,2,0110111001,,25.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-25
+07/18/05,From ChurchWorks,2,0110111001,,25.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-25
+07/18/05,From ChurchWorks,2,0110111001,,200.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-200
+07/18/05,From ChurchWorks,2,0110111001,,35.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-35
+07/18/05,From ChurchWorks,2,0110111001,,250.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-250
+07/18/05,From ChurchWorks,2,0110111001,,1000.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-1000
+07/18/05,From ChurchWorks,2,0110111001,,500.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-500
+07/18/05,From ChurchWorks,2,0110111001,,200.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-200
+07/18/05,From ChurchWorks,2,0110111001,,50.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-50
+07/18/05,From ChurchWorks,2,0110111001,,20000.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-20000
+07/18/05,From ChurchWorks,2,0110111001,,50.00
+07/18/05,From ChurchWorks,2,01101400011011011,,-50
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

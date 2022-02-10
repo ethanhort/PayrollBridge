@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HSESSN IM00004 BP iMIS GL Integration Entry 01142004   JV
 HDOC   IM00004 JV 050113-1    01132005 iMIS GL Integration Entry    iMIS 3
 DDOC   IM00004    050113-1    CR 050113-1: MIP Cash Receipt             CR  N 01132005 00001 00000162100 00000000000 01-101-11001                                            
@@ -7,3 +8,14 @@ HDOC   IM00004 JV 050114-3    01142005 iMIS GL Integration Entry    iMIS 3
 DDOC   IM00004    050114-3    CR 050114-3: MIP Cash Receipt             CR  N 01142005 00001 00000012573 00000000000 01-101-11001                                            
 DDOC   IM00004    050114-3       050114-3: MIP-AR-AR                    CR  N 01142005 00002 00000000000 00000007573 01-101-40001-101-101-1                                            
 DDOC   IM00004    050114-3       050114-3: MIP-AR-LABELS                CR  N 01142005 00003 00000000000 00000005000 01-101-46001-101-101-1                                            
+=======
+HSESSN IM00004 BP iMIS GL Integration Entry 01142004   JV
+HDOC   IM00004 JV 050113-1    01132005 iMIS GL Integration Entry    iMIS 3
+DDOC   IM00004    050113-1    CR 050113-1: MIP Cash Receipt             CR  N 01132005 00001 00000162100 00000000000 01-101-11001                                            
+DDOC   IM00004    050113-1       050113-1: MIP-AR-AR                    CR  N 01132005 00002 00000000000 00000157100 01-101-40001-101-101-1                                            
+DDOC   IM00004    050113-1       050113-1: MIP-AR-LABELS                CR  N 01132005 00003 00000000000 00000005000 01-101-45001-101-101-1                                            
+HDOC   IM00004 JV 050114-3    01142005 iMIS GL Integration Entry    iMIS 3
+DDOC   IM00004    050114-3    CR 050114-3: MIP Cash Receipt             CR  N 01142005 00001 00000012573 00000000000 01-101-11001                                            
+DDOC   IM00004    050114-3       050114-3: MIP-AR-AR                    CR  N 01142005 00002 00000000000 00000007573 01-101-40001-101-101-1                                            
+DDOC   IM00004    050114-3       050114-3: MIP-AR-LABELS                CR  N 01142005 00003 00000000000 00000005000 01-101-46001-101-101-1                                            
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

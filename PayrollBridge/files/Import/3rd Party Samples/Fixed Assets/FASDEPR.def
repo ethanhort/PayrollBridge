@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                     Abila MIP Fixed Assets by Abila, Inc.
 REM,                              Using Peachtree Link
@@ -47,3 +48,54 @@ TETRANS_DEBIT,6,0,,,,0
 TETRANS_CREDIT,6,0,,,,0
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                     Abila MIP Fixed Assets by Abila, Inc.
+REM,                              Using Peachtree Link
+REM,                               Fixed Asset System 
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+FILETYPE,CSV
+
+DISCARDFIRSTNRECORDS,1
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,,AUTONUM
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,,Import from Sage Fixed Assets (PT)
+SESSION_SESSIONDATE,1,,mm/dd/yy
+SESSION_TRANSSOURCEID,,JV
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION
+TEDOC_TRANSOURCE,,JV
+TEDOC_DOCNUM,2
+TEDOC_DESCRIPTION,5
+TEDOC_DOCDATE,1,,mm/dd/yy
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID
+TETRANS_DOCNUM,2
+TETRANS_DESCRIPTION,5
+TETRANS_ENTRY_TYPE,,N
+TETRANS_EFFECTIVEDATE,1,,mm/dd/yy
+TETRANS_SEGMENT_GL,4,,,8,5
+TETRANS_SEGMENT_Fund,4,,,1,2
+TETRANS_SEGMENT_Grant,4,,,4,3
+TETRANS_SEGMENT_Progr,4,,,14,3
+TETRANS_SEGMENT_Dept,4,,,18,3
+TETRANS_SEGMENT_117,4,,,22,1
+TETRANS_DEBIT,6,0,,,,0
+TETRANS_CREDIT,6,0,,,,0
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

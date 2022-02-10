@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Date,Reference,Date Clear in Bank Rec,Number of Distributions,G/L Account,Description,Amount,Job ID,Used for Reimbursable Expenses,Transaction Period,Transaction Number
 12/28/05,71,,2,01-101-11001,Transaction Detail,34.95,,FALSE,,
 12/28/05,71,,2,01-101-40001-101-101-1,Transaction Detail,-34.95,,FALSE,,
@@ -7,3 +8,14 @@ Date,Reference,Date Clear in Bank Rec,Number of Distributions,G/L Account,Descri
 01/02/06,71,,2,01-101-40001-101-101-1,Transaction Detail,-24.95,,FALSE,,
 01/06/06,71,,2,01-101-11001,Transaction Detail,1525.59,,FALSE,,
 01/06/06,71,,2,01-101-40001-101-101-1,Transaction Detail,-1525.59,,FALSE,,
+=======
+Date,Reference,Date Clear in Bank Rec,Number of Distributions,G/L Account,Description,Amount,Job ID,Used for Reimbursable Expenses,Transaction Period,Transaction Number
+12/28/05,71,,2,01-101-11001,Transaction Detail,34.95,,FALSE,,
+12/28/05,71,,2,01-101-40001-101-101-1,Transaction Detail,-34.95,,FALSE,,
+01/02/06,71,,2,01-101-11001,Transaction Detail,34.95,,FALSE,,
+01/02/06,71,,2,01-101-40001-101-101-1,Transaction Detail,-34.95,,FALSE,,
+01/02/06,71,,2,01-101-11001,Transaction Detail,24.95,,FALSE,,
+01/02/06,71,,2,01-101-40001-101-101-1,Transaction Detail,-24.95,,FALSE,,
+01/06/06,71,,2,01-101-11001,Transaction Detail,1525.59,,FALSE,,
+01/06/06,71,,2,01-101-40001-101-101-1,Transaction Detail,-1525.59,,FALSE,,
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

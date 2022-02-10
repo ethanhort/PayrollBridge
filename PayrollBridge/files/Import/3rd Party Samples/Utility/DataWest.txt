@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 101105 1690001101                     W-Metered Sales          10434.52
 101105 45001011011011011011           W-Metered Sales                        10434.52-
 101105 1690001101                     S-Charge                    16.03
@@ -22,3 +23,29 @@
 101105 1690001101                     Apply to Sewer                            91.34-
 101105 2200101101                     CR Remains on Acc        30489.35
 101105 1690001101                     CR Remains on Acc                      30489.35-
+=======
+101105 1690001101                     W-Metered Sales          10434.52
+101105 45001011011011011011           W-Metered Sales                        10434.52-
+101105 1690001101                     S-Charge                    16.03
+101105 2200101101                     S-Charge                                  16.03-
+101105 1690001101                     Superfund Tax                6.37
+101105 2200101101                     Superfund Tax                              6.37-
+101105 1690001101                     Sales Tax                  518.29
+101105 2200101101                     Sales Tax                                518.29-
+101105 1690001101                     Late Fee                 30405.04
+101105 45001011011011011011           Late Fee                               30405.04-
+101105 1690001101                     Shut Off Fee                25.00
+101105 45001011011011011011           Shut Off Fee                              25.00-
+101105 1100101101                     Payment by Check         96617.79
+101105 2200101101                     Payment by Check                       96617.79-
+101105 45001011011011011011           CR Misc Charges             25.00
+101105 2200101101                     CR Misc Charges                           25.00-
+101105 1690001101                     Apply CustomerCre           83.70
+101105 2200101101                     Apply CustomerCre                         83.70-
+101105 2200101101                     Apply to Water           66145.80
+101105 1690001101                     Apply to Water                         66145.80-
+101105 2200101101                     Apply to Sewer              91.34
+101105 1690001101                     Apply to Sewer                            91.34-
+101105 2200101101                     CR Remains on Acc        30489.35
+101105 1690001101                     CR Remains on Acc                      30489.35-
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -103,3 +104,110 @@ AC_CONTACT_LAST_NAME,18
 AC_CONTACT_POSITION,19
 AC_CONTACT_EMAIL,20
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                      ACCOUNTS PAYABLE MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,--------------------------------------------------------------------------
+FILE,VENDOR, C:\MIP Share\Import\CSV Samples\Vndr.csv
+FILE,VENDADDR_CODES, C:\MIP Share\Import\CSV Samples\VendCheckAddr.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+
+REM, *************************************************************************
+REM, If you are importing Default GL and Distribution codes for a vendor,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or your vendor will not import.
+REM,
+REM, You can import initial detail lines for 1099 Adjustments but you can not
+REM, update existing detail lines via the import process.
+REM, *************************************************************************
+
+REM,--------------------------------------------------------------------------
+REM,                      Vendor Information Import
+REM,--------------------------------------------------------------------------
+REM, Vendor Header Information
+REM,--------------------------------------------------------------------------
+CONTEXT,VENDOR,HEADER,HVEND
+VENDOR_ID,2
+VENDOR_STATUS,3,A
+VENDOR_NAME,6
+VENDOR_CLASS,4
+VENDOR_TYPE,5
+VENDOR_ADDRESS,19
+VENDOR_CITY,20
+VENDOR_STATE,21
+VENDOR_ZIP,22
+VENDOR_PHONE,28
+VENDOR_FAX,29
+VENDOR_FIRSTNAME,24
+VENDOR_MIDDLENAME,25
+VENDOR_LASTNAME,26
+VENDOR_TITLE,23
+VENDOR_POSITION,23
+VENDOR_EMAIL,30
+VENDOR_NETDUEDAYS,7
+VENDOR_GLCODE,8
+VENDOR_DISTCODE,9
+VENDOR_MISC1099,10,1
+VENDOR_TAXIDTYPE,13,F
+VENDOR_TAXID,12
+VENDOR_STATETAXWITHHELD,14,1
+VENDOR_1099STATE,15
+VENDOR_STATETAXID,16
+VENDOR_1099TYPEDEFAULT,17
+VENDOR_MISC1099BOXNUM,18
+VENDOR_NAMECONTROL,32
+VENDOR_PROPNAME,11
+VENDOR_POSAMEAS,10,1
+VENDOR_PERSONALACCT,31
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Detail lines or 1099 Adjustments, if applicable
+REM,----------------------------------------------------------------------------
+CONTEXT,VENDOR,DETAIL,DVEND
+VENDOR_YEAR,3
+VENDOR_1099TYPEID,4
+VENDOR_BOXNUMID,5
+VENDOR_AMOUNT,6,,,,,2
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Vendor Check Address Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,VENDADDR_CODES,HEADER,HVENDCHCKADDR
+AC_PARN_ID,2
+AC_ADDRESS_ID,3
+AC_STATUS,4
+AC_SAME_AS,5
+AC_PREFERRED,6
+AC_DESCRIPTION,7
+AC_ADDRESS,8
+AC_CITY,9
+AC_STATE,10
+AC_ZIP,11
+AC_COUNTRY,12
+AC_CONTACT_PHONE,13
+AC_CONTACT_FAX,14
+AC_CONTACT_TITLE,15
+AC_CONTACT_FIRST_NAME,16
+AC_CONTACT_MIDDLE_INITIAL,17
+AC_CONTACT_LAST_NAME,18
+AC_CONTACT_POSITION,19
+AC_CONTACT_EMAIL,20
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

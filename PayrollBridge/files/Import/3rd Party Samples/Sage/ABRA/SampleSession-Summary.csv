@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SampleSession,08/31/2006,21010,AbraPay,WLL - Abra Suite Payroll,-000000005274.88
 SampleSession,08/31/2006,21010,AbraPay,WLL - Abra Suite Payroll,-000000004423.66
 SampleSession,08/31/2006,21020,AbraPay,WLL - Abra Suite Payroll,-000000000483.60
@@ -10,3 +11,17 @@ SampleSession,08/31/2006,51020,AbraPay,WLL - Abra Suite Payroll,0000000000241.80
 SampleSession,08/31/2006,51030,AbraPay,WLL - Abra Suite Payroll,0000000000290.00
 SampleSession,08/31/2006,51030,AbraPay,WLL - Abra Suite Payroll,0000000000275.50
 SampleSession,08/31/2006,51150,AbraPay,WLL - Abra Suite Payroll,0000000000600.00
+=======
+SampleSession,08/31/2006,21010,AbraPay,WLL - Abra Suite Payroll,-000000005274.88
+SampleSession,08/31/2006,21010,AbraPay,WLL - Abra Suite Payroll,-000000004423.66
+SampleSession,08/31/2006,21020,AbraPay,WLL - Abra Suite Payroll,-000000000483.60
+SampleSession,08/31/2006,21030,AbraPay,WLL - Abra Suite Payroll,-000000000580.00
+SampleSession,08/31/2006,21030,AbraPay,WLL - Abra Suite Payroll,-000000000551.00
+SampleSession,08/31/2006,21150,AbraPay,WLL - Abra Suite Payroll,-000000002100.00
+SampleSession,08/31/2006,50001,AbraPay,WLL - Abra Suite Payroll,0000000020000.00
+SampleSession,08/31/2006,50001,AbraPay,WLL - Abra Suite Payroll,0000000019000.00
+SampleSession,08/31/2006,51020,AbraPay,WLL - Abra Suite Payroll,0000000000241.80
+SampleSession,08/31/2006,51030,AbraPay,WLL - Abra Suite Payroll,0000000000290.00
+SampleSession,08/31/2006,51030,AbraPay,WLL - Abra Suite Payroll,0000000000275.50
+SampleSession,08/31/2006,51150,AbraPay,WLL - Abra Suite Payroll,0000000000600.00
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

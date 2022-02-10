@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -71,3 +72,78 @@ CUSTOMER_SERVICETITLE,203,2
 CUSTOMER_SERVICEPOSITION,236,20
 CUSTOMER_SERVICEEMAIL,256,20
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                     ACCOUNTS RECEIVABLE MODULE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,----------------------------------------------------------------------------
+FILE,CUSTOMER, C:\MIP Share\Import\Fixed Width Samples\Cust.txt
+
+CONTEXTIDPOSITION,1,6
+
+REM,----------------------------------------------------------------------------
+REM,                    Accounts Receivable Import
+REM,----------------------------------------------------------------------------
+REM, ***************************************************************************
+REM, If you are importing Default GL and Distribution codes for a customer,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or your customer will not import.
+REM, ***************************************************************************
+
+REM,----------------------------------------------------------------------------
+REM,                      Customer Information Import
+REM,----------------------------------------------------------------------------
+REM, Customer Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,CUSTOMER,HEADER,HCUST
+CUSTOMER_ID,28,15
+CUSTOMER_STATUS,78,1,A
+CUSTOMER_NAME,43,35
+CUSTOMER_CASHCUSTOMER,345,1
+CUSTOMER_CLASS,7,11
+CUSTOMER_TYPE,18,10
+CUSTOMER_ADDRESS,111,35
+CUSTOMER_BILLINGCITY,146,15
+CUSTOMER_BILLINGSTATE,181,2
+CUSTOMER_BILLINGZIP,188,10
+CUSTOMER_BILLINGPHONE,276,15
+CUSTOMER_BILLINGFAX,301,14
+CUSTOMER_BILLINGFIRSTNAME,206,10
+CUSTOMER_BILLINGMIDDLENAME,216,2
+CUSTOMER_BILLINGLASTNAME,218,18
+CUSTOMER_BILLINGTITLE,203,2
+CUSTOMER_BILLINGPOSITION,236,20
+CUSTOMER_BILLINGEMAIL,256,20
+CUSTOMER_CREDITSTOP,328,2,0
+CUSTOMER_NETDUEDAYS,318,2,30
+CUSTOMER_DEFREVACCT,320,6
+CUSTOMER_DISTCODE,331,10
+CUSTOMER_WEBSITE,80,20
+CUSTOMER_RESALETAXID,155,11
+CUSTOMER_SERVICESAMEAS,316,1,1
+CUSTOMER_SERVICEADDRESS,111,35
+CUSTOMER_SERVICECITY,146,15
+CUSTOMER_SERVICESTATE,181,2
+CUSTOMER_SERVICEZIP,188,10
+CUSTOMER_SERVICEPHONE,276,15
+CUSTOMER_SERVICEFAX,301,14
+CUSTOMER_SERVICEFIRSTNAME,206,10
+CUSTOMER_SERVICEMIDDLENAME,216,2
+CUSTOMER_SERVICELASTNAME,218,18
+CUSTOMER_SERVICETITLE,203,2
+CUSTOMER_SERVICEPOSITION,236,20
+CUSTOMER_SERVICEEMAIL,256,20
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -146,3 +147,153 @@ AC_CONTACT_EMAIL
 ENDCONTEXT
 
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                          MasterAP.Def
+REM,                      ACCOUNTS PAYABLE MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+FILE,VENDOR, C:\MIP Share\Import\CSV Samples\Vndr.csv,,C:\MIP Share\Import\CSV Samples\VndrERR.csv
+FILE,VENDADDR_CODES, C:\MIP Share\Import\CSV Samples\VendCheckAddr.csv,,C:\MIP Share\Import\CSV Samples\VendCheckAddrERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM, *************************************************************************
+REM, If you are importing Default GL and Distribution codes for a vendor,
+REM, those codes must have already been entered in the database, either through
+REM, the Maintain Menu or the Import option, or you vendor will not import.
+REM,
+REM, You can import initial detail lines for 1099 Adjustments but you can not
+REM, update existing detail lines via the import process.
+REM, *************************************************************************
+
+REM,--------------------------------------------------------------------------
+REM,                      Vendor Information Import
+REM,--------------------------------------------------------------------------
+REM, Vendor Header Information
+REM,--------------------------------------------------------------------------
+CONTEXT,VENDOR,HEADER,HVEND
+VENDOR_ID
+VENDOR_STATUS
+VENDOR_NAME
+VENDOR_CURRENCYTYPE
+VENDOR_FORCECURTYPE
+VENDOR_CLASS
+VENDOR_TYPE
+VENDOR_ADDRESS
+VENDOR_CITY
+VENDOR_STATE
+VENDOR_ZIP
+VENDOR_COUNTRY
+VENDOR_PHONE
+VENDOR_FAX
+VENDOR_FIRSTNAME
+VENDOR_MIDDLENAME
+VENDOR_LASTNAME
+VENDOR_TITLE
+VENDOR_POSITION
+VENDOR_EMAIL
+VENDOR_HOLDPAYMENTS
+VENDOR_PRINTSEPCHECK
+VENDOR_CHECKSTUBCOMMENT
+VENDOR_DISCOUNT1
+VENDOR_DAYSAVAILABLE1
+VENDOR_DISCOUNT2
+VENDOR_DAYSAVAILABLE2
+VENDOR_NETDUEDAYS
+VENDOR_GLCODE
+VENDOR_DISTCODE
+VENDOR_MISC1099
+VENDOR_FOREIGNIND
+VENDOR_PROPNAME
+VENDOR_TAXIDTYPE
+VENDOR_TAXID
+VENDOR_STATETAXWITHHELD
+VENDOR_1099STATE
+VENDOR_STATETAXID
+VENDOR_1099TYPEDEFAULT
+VENDOR_MISC1099BOXNUM
+VENDOR_NAMECONTROL
+VENDOR_NOTES
+VENDOR_POSAMEAS
+VENDOR_POADDRESS
+VENDOR_POCITY
+VENDOR_POSTATE
+VENDOR_POZIP
+VENDOR_POCOUNTRY
+VENDOR_POPHONE
+VENDOR_POFAX
+VENDOR_POFIRSTNAME
+VENDOR_POMIDDLENAME
+VENDOR_POLASTNAME
+VENDOR_POTITLE
+VENDOR_POPOSITION
+VENDOR_POEMAIL
+VENDOR_ACCOUNT 
+VENDOR_USERID_GUID
+VENDOR_EPAYMENTS
+VENDOR_ROUTINGNUM
+VENDOR_ACCOUNTNUM
+VENDOR_ACCOUNTTYPE
+VENDOR_PRENOTE
+VENDOR_PERSONALACCT
+VENDOR_EFTEMAIL
+VENDOR_NOEMAIL
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Detail lines or 1099 Adjustments, if applicable
+REM,----------------------------------------------------------------------------
+CONTEXT,VENDOR,DETAIL,DVEND
+VENDOR_YEAR
+VENDOR_1099TYPEID
+VENDOR_BOXNUMID
+VENDOR_AMOUNT
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM,                      Vendor Information Import
+REM,----------------------------------------------------------------------------
+REM, Vendor Check Address Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,VENDADDR_CODES,HEADER,HVENDCHCKADDR
+AC_PARN_ID
+AC_ADDRESS_ID
+AC_STATUS
+AC_SAME_AS
+AC_PREFERRED
+AC_DESCRIPTION
+AC_ADDRESS
+AC_CITY
+AC_STATE
+AC_ZIP
+AC_COUNTRY
+AC_CONTACT_PHONE
+AC_CONTACT_FAX
+AC_CONTACT_TITLE
+AC_CONTACT_FIRST_NAME
+AC_CONTACT_MIDDLE_INITIAL
+AC_CONTACT_LAST_NAME
+AC_CONTACT_POSITION
+AC_CONTACT_EMAIL
+ENDCONTEXT
+
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

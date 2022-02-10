@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP. If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -107,3 +108,114 @@ TETRANS_DEBIT_FLAG
 TETRANS_AMOUNT_INDICATOR
 ENDCONTEXT
 
+=======
+REM, This sample file is subject to change by Abila MIP. If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                            MasterT1.Def
+REM,              TRANSACTIONS - TYPE 1 - SSSN HAS ONE LINE
+REM,                                      HDOC HAS ONE LINE
+REM,                                      DDOC HAS ONE LINE
+REM,                      Default Import Def File 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXT IDPOSITION,1,6 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,SESSION, C:\MIP Share\Import\CSV Samples\T1_trans.csv,C:\MIP Share\Import\CSV Samples\T1_transERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+APPLY_OFFSETS
+CLEANLINE_READ,1
+SUPPRESSWARNINGS
+RAZOR
+SEGMENTNOTSTRING
+
+REM,----------------------------------------------------------------------------
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into the system are 
+REM, Cash Disbursements (CD), Cash Receipts (CR), Journal Vouchers (JV), Budget Entries (BD), 
+REM, A/P Invoices (API), A/P Credit Memos (APM), A/P Manual Checks (APC), 
+REM, A/R Bills (ARB), A/R Credit Memos (ARM), A/R Receipts - Receipt (ARC), A/R Receipts - Prepayments (ARP), 
+REM, Encumbrances (ENC), and Encumbrance Liquidations (ENL).
+REM,----------------------------------------------------------------------------
+REM, 1 - (Nonprofit/Government Series)Reads Session line, Header Doc line and 
+REM,      Detail Doc from a line
+REM, 2 - (DOS)Reads Session from one line, then Header and Doc from next lines 
+REM, 3 - (Flat)Reads Session , Header, Detail from single flat line.
+
+TRANSACTION_READ,1
+
+REM,----------------------------------------------------------------------------
+REM, Session Header Information
+REM,----------------------------------------------------------------------------
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID
+SESSION_STATUS
+SESSION_CURRENCY_TYPE
+SESSION_RATE_TYPE
+SESSION_DESCRIPTION
+SESSION_SESSIONDATE
+SESSION_BUDGET_VERSION
+SESSION_TRANSSOURCEID
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Header Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION
+TEDOC_TRANSOURCE
+TEDOC_DOCNUM
+TEDOC_DESCRIPTION
+TEDOC_PLAYER_ID
+TEDOC_PLAYERTYPE
+TEDOC_1099TYPE
+TEDOC_ADDRESS_ID
+TEDOC_DOCDATE
+TEDOC_DUEDATE
+TEDOC_MISCINFO
+TEDOC_PAYMETHOD
+TEDOC_AR_CR_TYPE
+TEDOC_REVERSE
+TEDOC_REVERSE_EFFECTIVE_DATE
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Document Transaction Lines Information
+REM,----------------------------------------------------------------------------
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID
+TETRANS_DOCNUM
+TETRANS_DESCRIPTION
+TETRANS_ENTRY_TYPE
+TETRANS_EFFECTIVEDATE
+TETRANS_SEGMENT_GL
+TETRANS_SEGMENT_Fund
+TETRANS_SEGMENT_Grant
+TETRANS_SEGMENT_Progr
+TETRANS_SEGMENT_Dept
+TETRANS_SEGMENT_117
+TETRANS_DEBIT
+TETRANS_CREDIT
+TETRANS_1099BOX
+TETRANS_MATCH_DOCNUM
+TETRANS_MATCH_TRANSSOURCE
+TETRANS_CREDIT_FLAG
+TETRANS_DEBIT_FLAG
+TETRANS_AMOUNT_INDICATOR
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

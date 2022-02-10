@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 HDESIG    A              LEASE          A LEASED                     
 HDESIG    L              SHIPOFF        A SHIPPING OFFICES        
 HDESIG    R              ADMIN          A Administration Department     
 HDESIG    V              FMV            A FAIR MARKET VALUE             
+=======
+HDESIG    A              LEASE          A LEASED                     
+HDESIG    L              SHIPOFF        A SHIPPING OFFICES        
+HDESIG    R              ADMIN          A Administration Department     
+HDESIG    V              FMV            A FAIR MARKET VALUE             
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

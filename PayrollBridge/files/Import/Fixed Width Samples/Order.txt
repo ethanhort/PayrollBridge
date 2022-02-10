@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HSALESORD SO615         06/05/2017 Import Test      0  Q  AAA   <Billing>        06/10/2017  UPS  468  Account                  54321
 DSALESORD Class           10         45.00     1 1
 DSALESORD Shipping Each   10         35.00     2 1
@@ -6,3 +7,13 @@ DSALESORD Class           20         45.00     1 0
 DSALESORD Shipping Each   10         35.00     2 1
 
 
+=======
+HSALESORD SO615         06/05/2017 Import Test      0  Q  AAA   <Billing>        06/10/2017  UPS  468  Account                  54321
+DSALESORD Class           10         45.00     1 1
+DSALESORD Shipping Each   10         35.00     2 1
+HSALESORD SO616         06/05/2017 Import Test      0  S  AAA   <Billing>        06/10/2017  UPS  468  Account                  54322
+DSALESORD Class           20         45.00     1 0
+DSALESORD Shipping Each   10         35.00     2 1
+
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

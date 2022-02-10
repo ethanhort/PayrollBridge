@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HASSETTYPEOFFICEEQUIP    A Office Equipment              SL                            ASSETS59001 17501 17001 
+=======
+HASSETTYPEOFFICEEQUIP    A Office Equipment              SL                            ASSETS59001 17501 17001 
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

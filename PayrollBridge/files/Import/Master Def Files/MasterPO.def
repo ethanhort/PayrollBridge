@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -119,3 +120,126 @@ POENC_AMOUNT
 POENC_EXCHRATE
 ENDCONTEXT
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                           MasterPO.Def
+REM,                       PURCHASE ORDER MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context IDs for all data being
+REM, imported.  Discard records in the data file if you have a title line; the
+REM, command is DISCARDFIRSTNRECORDS. You may suppress warning error messages.
+REM, The command is SUPPRESSWARNINGS.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM, UPDATEIGNOREBLANK can be used if you do not want blank or empty fields to 
+REM, imported. This is necessary when you import Reference data using both full
+REM, Detail lines mixed with Detail lines with PO Item IDs which will auto-populate  
+REM, the detail line. GEN_CODING is used to produce the Coding data using the 
+REM, Detail line GL code and Distribution code. If you are importing the 
+REM, Coding data do not use GEN_CODING. Both CSV example types are provided.
+REM,--------------------------------------------------------------------------
+REM, To import Item codes, use the following command:
+FILE,ITEMCODES, C:\MIP Share\Import\CSV Samples\POItemCodes.csv,,C:\MIP Share\Import\CSV Samples\POItemCodesERR.csv
+REM, To import Purchase Orders, use the following command:
+FILE,PURCHASEORDER, C:\MIP Share\Import\CSV Samples\PORefWithoutCoding.csv,C:\MIP Share\Import\CSV Samples\PORefWithoutCodingERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+UPDATEIGNOREBLANK
+REM, Do not use GEN_CODING if importing Coding lines
+GEN_CODING
+
+REM,--------------------------------------------------------------------------
+REM,                       PO Item Codes Import
+REM,--------------------------------------------------------------------------
+CONTEXT,ITEMCODES,HEADER,HITEMS
+ITEM_CODE
+ITEM_STATUS
+ITEM_DESCRIPTION
+ITEM_ITYPE
+ITEM_CURTYPE
+ITEM_PURUNITTYPE
+ITEM_STDQTY
+ITEM_LOCATION
+ITEM_PUR_GLCODE
+ITEM_INTEXP_GLCODE
+ITEM_DEF_DISTCODE
+ITEM_UNITCOST
+ITEM_WEIGHT
+ITEM_WEIGHT_UNIT
+ITEM_PREF_VENDOR
+ITEM_HISTORY
+ENDCONTEXT
+
+
+REM,----------------------------------------------------------------------------
+REM, PO Reference data with status of "Ready To Print" or "In Process" only
+REM,----------------------------------------------------------------------------
+CONTEXT,PURCHASEORDER,HEADER,HPO
+PO_NUMBERTYPE
+PO_NUMBER
+PO_DATE
+PO_STATUS
+PO_DESCRIPTION
+PO_PLAYER_ID
+PO_CURRENCY
+PO_CREATE_ENC
+PO_CREATE_RECEIVE
+PO_SHIP_ADDR_CODE
+PO_BILL_ADDR_CODE
+PO_ATTENTION
+PO_BUYER
+PO_FOB
+PO_SHIPMETHOD
+PO_COMMENT
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, PO Item Detail Line - GEN_CODING will auto-populate the Coding lines using
+REM, GL Code and Distribution Code
+REM,----------------------------------------------------------------------------
+CONTEXT,PURCHASEORDER,DETAIL,DDETAIL
+PO_LINE_ID
+PO_ITEM_CATEGORY
+PO_ITEMID
+PO_ITEMDESC
+PO_SPECIALNOTES
+PO_GLCODE
+PO_DISTCODE
+PO_UNITTYPE
+PO_QTY
+PO_UNITCOST
+PO_DATEREQUIREDBY
+PO_DATEPROMISED
+PO_REQUESTEDFOR
+PO_REQ_NUMBER
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, PO Coding Line - Do not use GEN_CODING if importing Coding Lines
+REM,----------------------------------------------------------------------------
+CONTEXT,PURCHASEORDER,DETAIL,DCODING
+POENC_LINE_ID
+POENC_EFFDATE
+POENC_SEGMENT_GL
+POENC_SEGMENT_Fund
+POENC_SEGMENT_Grant
+POENC_SEGMENT_Progr
+POENC_SEGMENT_Dept
+POENC_SEGMENT_117
+POENC_AMOUNT
+POENC_EXCHRATE
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

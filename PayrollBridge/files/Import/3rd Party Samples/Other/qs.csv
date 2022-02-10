@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 v06.00,General Journal,01/28/05, ,01101400011011011,POS at Reg 1,0.0,1,-150.00,N,,N,N,0
 v06.00,General Journal,04/27/05, ,01101400011011011,POS at Reg 1,0.0,2,-300.00,N,,N,N,0
 v06.00,General Journal,08/10/05, ,01101400011011011,POS at Reg 1,0.0,3,-600.00,N,,N,N,0
 v06.00,General Journal,08/28/05, ,01101400011011011,POS at Reg 1,0.0,6,-1200,N,,N,N,0
 v06.00,General Journal,10/14/05, ,01101400011011011,POS at Reg 1,0.0,7,-2400,N,,N,N,0
 v06.00,General Journal,04/27/05, ,01101400011011011,POS at Reg 2,0.0,4,-4800.00,N,,N,N,0
+=======
+v06.00,General Journal,01/28/05, ,01101400011011011,POS at Reg 1,0.0,1,-150.00,N,,N,N,0
+v06.00,General Journal,04/27/05, ,01101400011011011,POS at Reg 1,0.0,2,-300.00,N,,N,N,0
+v06.00,General Journal,08/10/05, ,01101400011011011,POS at Reg 1,0.0,3,-600.00,N,,N,N,0
+v06.00,General Journal,08/28/05, ,01101400011011011,POS at Reg 1,0.0,6,-1200,N,,N,N,0
+v06.00,General Journal,10/14/05, ,01101400011011011,POS at Reg 1,0.0,7,-2400,N,,N,N,0
+v06.00,General Journal,04/27/05, ,01101400011011011,POS at Reg 2,0.0,4,-4800.00,N,,N,N,0
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

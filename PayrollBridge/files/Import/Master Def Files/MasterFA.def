@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -115,3 +116,122 @@ DEPR_DET_YEAR
 DEPR_DET_PERC         
 DEPR_DET_NOTE      
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,----------------------------------------------------------------------------
+REM,                        MasterFA.Def
+REM,                        FIXED ASSETS
+REM,                    DEFAULT IMPORT DEF FILE
+REM,----------------------------------------------------------------------------
+REM, 
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.  Also included here is the CONTEXTIDPOSITION,1,10 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,----------------------------------------------------------------------------
+FILE,FADEPR             ,C:\MIP Share\Import\CSV Samples\FAType.csv,,C:\MIP Share\Import\CSV Samples\FATypeERR.csv
+FILE,FATYPE             ,C:\MIP Share\Import\CSV Samples\FADesign.csv,,C:\MIP Share\Import\CSV Samples\FADesignERR.csv
+FILE,DESGCODES          ,C:\MIP Share\Import\CSV Samples\FACode.csv,,C:\MIP Share\Import\CSV Samples\FACodeERR.csv
+FILE,ASSETS             ,C:\MIP Share\Import\CSV Samples\FACustDe.csv,,C:\MIP Share\Import\CSV Samples\FACustDeERR.csv
+REM,----------------------------------------------------------------------------
+REM,           ContextID Position
+REM,----------------------------------------------------------------------------
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM,----------------------------------------------------------------------------
+REM,                            Asset Type Import
+REM,----------------------------------------------------------------------------
+REM,              Fixed Asset Data for Asset Type
+REM,----------------------------------------------------------------------------
+CONTEXT,FATYPE,HEADER,HASSETTYPE
+FATM_TYPEID      
+FATM_STATUS       
+FATM_DESCRIP      
+FATM_DEPRCODE      
+FATM_SW_DEPRCODE      
+FATM_DISTCODE     
+FATM_EXPCODE     
+FATM_ADCODE      
+FATM_ASSETCODE      
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                          Designation Import
+REM,----------------------------------------------------------------------------
+REM, Acquisition, Location, Responsibility & Valuation Code Information
+REM,----------------------------------------------------------------------------
+CONTEXT,DESGCODES,HEADER,HDESIG
+MTNDSG_CODETYPE      
+MTNDSG_CODEID      
+MTNDSG_STATUS       
+MTNDSG_DESCRIP      
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                        Asset Import
+REM,----------------------------------------------------------------------------
+REM,             Fixed Asset Data for Assets
+REM,----------------------------------------------------------------------------
+CONTEXT,ASSETS,HEADER,HASSET
+ASSET_ID      
+ASSET_STATUS       
+ASSET_DESCRIPTION      
+ASSET_CATEGORY      
+ASSET_TAG      
+ASSET_ORGASSETID      
+ASSET_TAXABLE       
+ASSET_ACQCODE       
+ASSET_RESCODE       
+ASSET_VALCODE       
+ASSET_LOCCODE       
+ASSET_TYPE_ID       
+ASSET_COST           
+ASSET_SALVAGE           
+ASSET_BEGDEPRDATE      
+ASSET_LASTDEPRDATE      
+ASSET_ACCMDEPRAMT           
+ASSET_MONTHSDEPR          
+ASSET_MAINTDATE      
+ASSET_WARRANTY       
+ASSET_MODEL       
+ASSET_SERIAL       
+ASSET_PAYEE       
+ASSET_DOCNUM       
+ASSET_ACQDATE      
+ASSET_PONUM       
+ASSET_CODE      
+ASSET_LIFE          
+ASSET_REPLACECOST
+ASSET_ZEROBV
+ASSET_NOTES
+ENDCONTEXT
+REM,----------------------------------------------------------------------------
+REM,                         Depreciation Code Import
+REM,----------------------------------------------------------------------------
+REM,         Fixed Asset Data for Custom Depreciation Codes
+REM,----------------------------------------------------------------------------
+CONTEXT,FADEPR,HEADER,HDEPRCODE
+DEPR_CODEID      
+DEPR_STATUS       
+DEPR_DESCRIP      
+DEPR_METHOD     
+DEPR_FAMOUNT          
+DEPR_PERCENT         
+ENDCONTEXT
+CONTEXT,FADEPR,DETAIL,DDEPRCODE
+DEPR_DET_YEAR      
+DEPR_DET_PERC         
+DEPR_DET_NOTE      
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

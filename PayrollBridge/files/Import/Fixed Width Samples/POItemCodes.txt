@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 K-1700   Lard                60001  012  12.50  Vats         N                
 K-1701   Corn Meal           60001  006  15.00  Bags         N                
 K-1702   Rice                60001  006  10.00  Bags         N                
@@ -12,3 +13,19 @@ K-1710   Potatoes            60001  006  08.99  Bags         N
 K-1711   Carrots             60001  025  01.99  Bushels      N
 
 
+=======
+K-1700   Lard                60001  012  12.50  Vats         N                
+K-1701   Corn Meal           60001  006  15.00  Bags         N                
+K-1702   Rice                60001  006  10.00  Bags         N                
+K-1703   Oats                60001  006  08.00  Bags         N                
+K-1704   Sugar               60001  006  22.50  Bags         N                
+K-1705   Baking Soda         60001  012  00.95  Boxes        N
+K-1706   Baking Powder       60001  012  02.25  Cans         N
+K-1707   Chicken Bouillon    60001  005  24.00  Flats        N
+K-1708   Beef Bouillon       60001  005  24.00  Flats        N
+K-1709   Vegatable Bouillon  60001  005  24.00  Flats        N 
+K-1710   Potatoes            60001  006  08.99  Bags         N       
+K-1711   Carrots             60001  025  01.99  Bushels      N
+
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

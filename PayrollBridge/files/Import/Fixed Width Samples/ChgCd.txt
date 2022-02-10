@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 HCHCOD Fixed       Rent      Fixed Amount for Rent         A FA 950  0.000045001    Assets         N   
 
+=======
+HCHCOD Fixed       Rent      Fixed Amount for Rent         A FA 950  0.000045001    Assets         N   
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

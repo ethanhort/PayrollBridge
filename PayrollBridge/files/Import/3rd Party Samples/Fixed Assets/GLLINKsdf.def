@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                            FAS by Abila, Inc.
 REM,                              Using Universal Link
@@ -53,3 +54,60 @@ TETRANS_1099BOX
 TETRANS_MATCH_DOCNUM
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                            FAS by Abila, Inc.
+REM,                              Using Universal Link
+REM,                               Fixed Asset System 
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+FILETYPE,CSV
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,,AUTONUM
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,,Import from Best FAS GLLINK.SDF
+SESSION_SESSIONDATE,2,,yyyymmdd
+SESSION_TRANSSOURCEID,,JV
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION
+TEDOC_TRANSOURCE,,JV
+TEDOC_DOCNUM,5
+TEDOC_DESCRIPTION,6
+TEDOC_PLAYER_ID
+TEDOC_DOCDATE,4,,yyyymmdd
+TEDOC_DUEDATE
+TEDOC_MISCINFO
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID
+TETRANS_DOCNUM,5
+TETRANS_DESCRIPTION,6
+TETRANS_ENTRY_TYPE,,N
+TETRANS_EFFECTIVEDATE,4,,yyyymmdd
+TETRANS_SEGMENT_GL,1,,,8,5
+TETRANS_SEGMENT_Fund,1,,,1,2
+TETRANS_SEGMENT_Grant,1,,,4,3
+TETRANS_SEGMENT_Progr,1,,,14,3
+TETRANS_SEGMENT_Dept,1,,,18,3
+TETRANS_SEGMENT_117,1,,,22,1
+TETRANS_CREDIT_FLAG,C
+TETRANS_DEBIT_FLAG,D
+TETRANS_AMOUNT_INDICATOR,9,D
+TETRANS_DEBIT,8,0,,,,0
+TETRANS_CREDIT,8,0,,,,0
+TETRANS_1099BOX
+TETRANS_MATCH_DOCNUM
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

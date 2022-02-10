@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HDED        UW    AUnited Way PR Deduction       21160    AT00000000.0000009999999-1+0+0+0+0+0+0+000.000000
+=======
+HDED        UW    AUnited Way PR Deduction       21160    AT00000000.0000009999999-1+0+0+0+0+0+0+000.000000
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

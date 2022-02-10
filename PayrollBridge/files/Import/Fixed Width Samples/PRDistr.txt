@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 HDIST       Fund    Fund Allocation             A              
 DDIST       Fund    01   101  101  101  1  00.0  00075   0000000000000
 DDIST       Fund    04   201  101  101  1  00.0  00008   0000000000000
 DDIST       Fund    05   301  101  101  1  00.0  00012   0000000000000
 DDIST       Fund    01   101  201  301  1  00.0  00005   0000000000000
+=======
+HDIST       Fund    Fund Allocation             A              
+DDIST       Fund    01   101  101  101  1  00.0  00075   0000000000000
+DDIST       Fund    04   201  101  101  1  00.0  00008   0000000000000
+DDIST       Fund    05   301  101  101  1  00.0  00012   0000000000000
+DDIST       Fund    01   101  201  301  1  00.0  00005   0000000000000
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

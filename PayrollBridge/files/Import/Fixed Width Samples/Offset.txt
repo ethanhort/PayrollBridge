@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HOFFST API     07     58001      07     20000
 HOFFST API     07     58002      07     20000
 HOFFST API     07     58003      07     20000
@@ -6,4 +7,14 @@ HOFFST CD      07     58001      07     11001
 HOFFST CD      07     58002      07     11001
 HOFFST CD      07     58003      07     11001
 HOFFST CD      07     58004      07     11001
+=======
+HOFFST API     07     58001      07     20000
+HOFFST API     07     58002      07     20000
+HOFFST API     07     58003      07     20000
+HOFFST API     07     58004      07     20000
+HOFFST CD      07     58001      07     11001
+HOFFST CD      07     58002      07     11001
+HOFFST CD      07     58003      07     11001
+HOFFST CD      07     58004      07     11001
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git
 HOFFST APC     04     20000      04     11001                        USD

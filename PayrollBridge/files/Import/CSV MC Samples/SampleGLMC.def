@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -98,3 +99,105 @@ CKSP_CHECKNUM,2
 CKSP_STARTINGNUM,7
 CKSP_ENDINGNUM,8
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                      GENERAL LEDGER MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+FILE,COACODE,   C:\MIP Share\Import\CSV MC Samples\COAMC.csv
+FILE,CLOSEACCT, C:\MIP Share\Import\CSV MC Samples\CloseMC.csv
+FILE,OFFSET,    C:\MIP Share\Import\CSV MC Samples\OffsetMC.csv
+FILE,DISTCODE,  C:\MIP Share\Import\CSV MC Samples\PRDistrMC.csv
+FILE,CHKSPOIL,  C:\MIP Share\Import\CSV MC Samples\CheckSpoilMC.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+
+REM,--------------------------------------------------------------------------
+REM,                      Chart Of Accounts Import
+REM, Make sure COA codes are imported first if they are later used in Close and REM, Offset Account Assignments.
+REM,--------------------------------------------------------------------------
+CONTEXT,COACODE,HEADER,HCOA
+COA_SEGID,2
+COA_CODE,3
+COA_STATUS,,A
+COA_TITLE,4
+COA_SHORT_TITLE,5
+COA_TYPE,6
+COA_DESIGNATION,8
+COA_990LN,7
+COA_CURRENCY,9
+ENDCONTEXT
+
+REM,--------------------------------------------------------------------------
+REM, Closing Account Assignments
+REM,--------------------------------------------------------------------------
+CONTEXT,CLOSEACCT,HEADER,HCLAC
+CAA_FUND,3
+CAA_GL,2
+CAA_GL_CLOSEINTO,4
+ENDCONTEXT
+
+REM,--------------------------------------------------------------------------
+REM, Offset Account Assignments
+REM,--------------------------------------------------------------------------
+CONTEXT,OFFSET,HEADER,HOFFST
+OFFSET_TRANSID,2
+OFFSET_TRIGGERFUNDID,3
+OFFSET_TRIGGERGLID,4
+OFFSET_CURRENCYTYPE,7
+OFFSET_OFFSETFUND,5
+OFFSET_OFFSETGL,6
+ENDCONTEXT
+
+REM,-------------------------------------------------   
+REM,           Distribution Code
+REM,-------------------------------------------------  
+CONTEXT,DISTCODE,HEADER,HDIST
+DISTCODE_CODE,2
+DISTCODE_DESCRIPTION,3
+DISTCODE_STATUS,4
+DISTCODE_USE_IN_MODULE,5
+DISTCODE_MCURRENCY,6
+ENDCONTEXT
+CONTEXT,DISTCODE,DETAIL,DDIST
+DISTDETAIL_SEGMENT_FUND,3
+DISTDETAIL_SEGMENT_GRANT,4
+DISTDETAIL_SEGMENT_PROGR,5
+DISTDETAIL_SEGMENT_DEPT,6
+DISTDETAIL_SEGMENT_117,7
+DISTDETAIL_UNITS,8
+DISTDETAIL_PERCENTAGE,9
+DISTDETAIL_AMOUNT,10
+ENDCONTEXT
+
+
+
+
+REM,-------------------------------------------------   
+REM,           Check Spoilage
+REM,-------------------------------------------------  
+CONTEXT,CHKSPOIL,HEADER,HCKSPOIL
+CKSP_CASH_ACCT_CODE,3
+CKSP_DATE,4,,MM/DD/YYYY
+CKSP_DESCRIPTION,5
+CKSP_SINGLE,6
+CKSP_CHECKNUM,2
+CKSP_STARTINGNUM,7
+CKSP_ENDINGNUM,8
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -43,3 +44,50 @@ ITEM_PURUNITTYPE,12
 ITEM_STDQTY,13
 ENDCONTEXT
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                       PURCHASE ORDER MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the text files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,,,HITEMS which 
+REM, references a default value that will be used for all the data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+FILE,ITEMCODES, C:\MIP Share\Import\CSV MC Samples\POItemsMC.csv
+
+CONTEXTIDPOSITION,,,HITEMS
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+
+REM,--------------------------------------------------------------------------
+REM,                        PO Item Codes Import
+REM, 
+REM,--------------------------------------------------------------------------
+CONTEXT,ITEMCODES,HEADER,HITEMS
+ITEM_CODE,1
+ITEM_STATUS,,A
+ITEM_DESCRIPTION,2
+ITEM_DEF_GLCODE,3
+ITEM_DEF_DISTCODE,,Direct
+ITEM_UNITTYPE,6
+ITEM_NUMOFUNITS,4
+ITEM_UNITCOST,5,,,,,0
+ITEM_ITYPE,7
+ITEM_CURTYPE,14
+ITEM_PUR_GLCODE,9
+ITEM_DEF_DISTCODE,11
+ITEM_PURUNITTYPE,12
+ITEM_STDQTY,13
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 HLEAVE      SICK3ASICK3                          0040999FP00.1000 80 0.0
 DLEAVE      SICK3OT
 DLEAVE      SICK3Wages
 HLEAVE      SICK9ASICK3                          0040999PT00.0000 99920.00
 DLEAVE      SICK9OT
 DLEAVE      SICK9Wages
+=======
+HLEAVE      SICK3ASICK3                          0040999FP00.1000 80 0.0
+DLEAVE      SICK3OT
+DLEAVE      SICK3Wages
+HLEAVE      SICK9ASICK3                          0040999PT00.0000 99920.00
+DLEAVE      SICK9OT
+DLEAVE      SICK9Wages
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

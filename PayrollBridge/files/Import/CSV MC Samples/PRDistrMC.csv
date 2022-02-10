@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 HDIST,Fund2,Fund 2 Allocation,A,A,USD,,,,,
 DDIST,Fund2,01,101,101,101,1,0,0,10,
 DDIST,Fund2,04,201,101,101,1,0,8,0,
 DDIST,Fund2,05,301,101,101,1,0,12,0,
 DDIST,Fund2,01,101,201,301,1,0,80,0,A
+=======
+HDIST,Fund2,Fund 2 Allocation,A,A,USD,,,,,
+DDIST,Fund2,01,101,101,101,1,0,0,10,
+DDIST,Fund2,04,201,101,101,1,0,8,0,
+DDIST,Fund2,05,301,101,101,1,0,12,0,
+DDIST,Fund2,01,101,201,301,1,0,80,0,A
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

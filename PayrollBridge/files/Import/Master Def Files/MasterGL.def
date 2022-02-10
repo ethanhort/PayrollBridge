@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory. Abila MIP replaces the sample DEF files when you 
@@ -168,3 +169,175 @@ EMAIL_BCC_ADDRESS
 EMAIL_SUBJECT
 EMAIL_MESSAGE
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory. Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                           MasterGL.Def
+REM,                      GENERAL LEDGER MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.  Discard records in the data file if you have a title line.  
+REM, You may suppress warning error messages.  You need to specify a file type.  
+REM, You can select CSV for comma separated variable or POSLEN for fixed width.
+REM,--------------------------------------------------------------------------
+REM,
+REM,--------------------------------------------------------------------------
+REM, You can import initial detail lines for Distribution Codes but you can 
+REM, not update existing detail lines via the import process.
+REM,--------------------------------------------------------------------------
+
+FILE,COACODE,		C:\MIP Share\Import\CSV Samples\COA.csv,,C:\MIP Share\Import\CSV Samples\COAERR.csv
+FILE,CLOSEACCT,		C:\MIP Share\Import\CSV Samples\Close.csv,,C:\MIP Share\Import\CSV Samples\CloseERR.csv
+FILE,OFFSET,		C:\MIP Share\Import\CSV Samples\Offset.csv,,C:\MIP Share\Import\CSV Samples\OffsetERR.csv
+FILE,DISTCODE,		C:\MIP Share\Import\CSV Samples\PRDistr.csv,,C:\MIP Share\Import\CSV Samples\PRDistrERR.csv
+FILE,CHKSPOIL,		C:\MIP Share\Import\CSV Samples\CheckSpoil.csv,C:\MIP Share\Import\CSV Samples\CheckSpoilERR.csv
+FILE,EMAILTEMPLATE,	C:\MIP Share\Import\CSV Samples\EmailTemplate.csv,C:\MIP Share\Import\CSV Samples\EmailTemplateERR.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,1
+SUPPRESSWARNINGS
+
+REM,--------------------------------------------------------------------------
+REM,                      Fund Designation Import
+REM, Ensure the function FND is assigned to a segment on the 
+REM, Administration>Organization>Organization Information>Segments tab.
+REM,--------------------------------------------------------------------------
+
+CONTEXT,COAFUNDDES,HEADER,HFND
+FND_CODE
+FND_DESCRIPTION
+ENDCONTEXT
+
+REM,--------------------------------------------------------------------------
+REM,                      Chart Of Accounts Import
+REM, Make sure COA codes are imported first if they are later used in Close and REM, Offset Account Assignments.
+REM,--------------------------------------------------------------------------
+CONTEXT,COACODE,HEADER,HCOA
+COA_SEGID
+COA_CODE
+COA_STATUS
+COA_TITLE
+COA_SHORT_TITLE
+COA_TYPE
+COA_DESIGNATION
+COA_990LN
+COA_CHK_NUM
+COA_CURRENCY
+COA_GA_STAGE
+COA_GA_ACCTNUM
+COA_GA_PROJDIR	
+COA_GA_AWDTYPE
+COA_GA_AWDNOTFDATE
+COA_GA_GRNTPRDFROM
+COA_GA_GRNTPRDTO
+COA_GA_EXTDATE
+COA_GA_PROJAMT
+COA_GA_PMTMTHD
+COA_GA_CSP
+COA_GA_ICR
+COA_GA_NRD
+COA_GA_LRD
+COA_GA_IAR
+COA_GA_GRNTSPNSR
+COA_GA_GRNTID
+COA_GA_GRNTOFFICIAL
+COA_GA_POSITION
+COA_GA_VOICE
+COA_GA_FAX
+COA_GA_ADDR
+COA_GA_CITY
+COA_GA_STATE
+COA_GA_ZIP
+COA_GA_COUNTRY
+COA_GA_EMAIL
+COA_GA_PGMOFFICIAL
+COA_GA_CUSTID
+ENDCONTEXT
+
+REM,----------------------------------------------------------------------------
+REM, Detail lines or Required Account Assignments, if applicable
+REM,----------------------------------------------------------------------------
+CONTEXT,COACODE,DETAIL,DCOA
+COA_ASSIGN_NAME
+ENDCONTEXT
+
+REM,--------------------------------------------------------------------------
+REM, Closing Account Assignments
+REM,--------------------------------------------------------------------------
+CONTEXT,CLOSEACCT,HEADER,HCLAC
+CAA_FUND
+CAA_GL
+CAA_GL_CLOSEINTO
+ENDCONTEXT
+
+REM,--------------------------------------------------------------------------
+REM, Offset Account Assignments
+REM,--------------------------------------------------------------------------
+CONTEXT,OFFSET,HEADER,HOFFST
+OFFSET_TRANSID
+OFFSET_TRIGGERFUNDID
+OFFSET_TRIGGERGLID
+OFFSET_CURRENCYTYPE
+OFFSET_OFFSETFUND
+OFFSET_OFFSETGL
+OFFSET_TRIGGERIF
+OFFSET_OFFSETIF
+ENDCONTEXT
+
+REM,-------------------------------------------------   
+REM,           Distribution Code
+REM,-------------------------------------------------  
+CONTEXT,DISTCODE,HEADER,HDIST
+DISTCODE_CODE
+DISTCODE_DESCRIPTION
+DISTCODE_STATUS
+DISTCODE_MCURRENCY
+DISTCODE_USE_IN_MODULE
+ENDCONTEXT
+CONTEXT,DISTCODE,DETAIL,DDIST
+DISTDETAIL_SEGMENT_FUND
+DISTDETAIL_SEGMENT_GRANT
+DISTDETAIL_SEGMENT_PROGR
+DISTDETAIL_SEGMENT_DEPT
+DISTDETAIL_SEGMENT_117
+DISTDETAIL_UNITS
+DISTDETAIL_PERCENTAGE
+DISTDETAIL_AMOUNT
+ENDCONTEXT
+
+REM,-------------------------------------------------   
+REM,           Check Spoilage
+REM,-------------------------------------------------  
+CONTEXT,CHKSPOIL,HEADER,HCKSPOIL
+CKSP_CASH_ACCT_CODE
+CKSP_DATE
+CKSP_DESCRIPTION
+CKSP_SINGLE
+CKSP_CHECKNUM
+CKSP_STARTINGNUM
+CKSP_ENDINGNUM
+ENDCONTEXT
+
+REM,-------------------------------------------------   
+REM,           Email Template
+REM,-------------------------------------------------  
+CONTEXT,EMAILTEMPLATE,HEADER,HEMAILTPLT
+EMAIL_TYPE
+EMAIL_PROCESS_TEMPLATE
+EMAIL_FROM_ADDRESS
+EMAIL_CC_ADDRESS
+EMAIL_BCC_ADDRESS
+EMAIL_SUBJECT
+EMAIL_MESSAGE
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

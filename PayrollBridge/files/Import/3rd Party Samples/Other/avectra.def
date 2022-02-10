@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                         Avectra
 REM,                   Membership Management
@@ -47,3 +48,54 @@ TETRANS_DEBIT,15,12,0,0
 TETRANS_CREDIT,28,12,0,0
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                         Avectra
+REM,                   Membership Management
+REM,                 Importing Journal Vouchers
+REM, 
+REM,   MIP SessionID = 1st 14 characters of Avectra Batch Name
+REM, MIP Document Number = 1st 15 characters of Avectra Batch Name
+REM,      MIP Transaction Description = Avectra Batch Name
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,74,14
+SESSION_STATUS,,,BP
+SESSION_DESCRIPTION,,,Imported Session from Avectra
+SESSION_SESSIONDATE,4,10
+SESSION_TRANSSOURCEID,1,3
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,74,14
+TEDOC_TRANSOURCE,1,3
+TEDOC_DOCNUM,74,15
+TEDOC_DESCRIPTION,,,Imported Document from Avectra
+TEDOC_DOCDATE,4,10
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,74,14
+TETRANS_DOCNUM,74,15
+TETRANS_DESCRIPTION,74,30
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,4,10
+TETRANS_SEGMENT_GL,43,5
+TETRANS_SEGMENT_Fund,41,2
+TETRANS_SEGMENT_Grant,48,3
+TETRANS_SEGMENT_Progr,51,3
+TETRANS_SEGMENT_Dept,54,3
+TETRANS_SEGMENT_117,57,1
+TETRANS_DEBIT,15,12,0,0
+TETRANS_CREDIT,28,12,0,0
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

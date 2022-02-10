@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                        eTapestry
 REM,                 Importing cash receipts
@@ -46,3 +47,53 @@ TETRANS_CREDIT,115,11,0,0
 TETRANS_1099BOX
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                        eTapestry
+REM,                 Importing cash receipts
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+TRANSACTION_READ,3
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,1,12
+SESSION_STATUS,,,BP
+SESSION_DESCRIPTION,28,60
+SESSION_SESSIONDATE,87,10
+SESSION_TRANSSOURCEID,,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,1,12
+TEDOC_TRANSOURCE,,,CR
+TEDOC_DOCNUM,13,15
+TEDOC_DESCRIPTION,28,60
+TEDOC_PLAYER_ID
+TEDOC_DOCDATE,87,10
+TEDOC_DUEDATE
+TEDOC_MISCINFO
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,1,12
+TETRANS_DOCNUM,13,15
+TETRANS_DESCRIPTION,28,60
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,87,10
+TETRANS_SEGMENT_GL,134,5
+TETRANS_SEGMENT_Fund,132,2
+TETRANS_SEGMENT_Grant,139,3
+TETRANS_SEGMENT_Progr,142,3
+TETRANS_SEGMENT_Dept,145,3
+TETRANS_SEGMENT_117,148,1
+TETRANS_DEBIT,98,17,0,0
+TETRANS_CREDIT,115,11,0,0
+TETRANS_1099BOX
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

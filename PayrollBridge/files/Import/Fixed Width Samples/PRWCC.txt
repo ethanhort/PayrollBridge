@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 HWC         WC001 ARATE PER 100 DOLLARS          ER5109021090RE50.00000.0000999999999CE-1<None>
 DWC         WC001 OT
 DWC         WC001 Wages
 HWC         WC002 ARATE PER HOUR                 ER5109021090RW25.00000.0000         CE-1<None>
 DWC         WC002 OT
 DWC         WC002 Wages
+=======
+HWC         WC001 ARATE PER 100 DOLLARS          ER5109021090RE50.00000.0000999999999CE-1<None>
+DWC         WC001 OT
+DWC         WC001 Wages
+HWC         WC002 ARATE PER HOUR                 ER5109021090RW25.00000.0000         CE-1<None>
+DWC         WC002 OT
+DWC         WC002 Wages
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

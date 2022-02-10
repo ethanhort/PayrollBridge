@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 HEMAILTPLT,Voucher,<Default>,nonprofit.org@help.com,,,Payroll Voucher,Please see the attached payroll voucher.
 
+=======
+HEMAILTPLT,Voucher,<Default>,nonprofit.org@help.com,,,Payroll Voucher,Please see the attached payroll voucher.
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

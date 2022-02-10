@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM,----------------------------------------------------------------------------
 REM,                     DataWest, DOS version
 REM,                        Utility Billing
@@ -53,3 +54,60 @@ TETRANS_1099BOX
 TETRANS_MATCH_DOCNUM
 ENDCONTEXT
 
+=======
+REM,----------------------------------------------------------------------------
+REM,                     DataWest, DOS version
+REM,                        Utility Billing
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+FILETYPE,CSV|
+
+TRANSACTION_READ,3
+
+DISCARDFIRSTNRECORDS,2
+
+APPLY_OFFSETS
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,,AUTONUM
+SESSION_STATUS,,BP
+SESSION_DESCRIPTION,,Import from DataWest
+SESSION_SESSIONDATE,4,,mmddyy
+SESSION_TRANSSOURCEID,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION
+TEDOC_TRANSOURCE,,CR
+TEDOC_DOCNUM
+TEDOC_DESCRIPTION,,Record Revenue
+TEDOC_PLAYER_ID
+TEDOC_DOCDATE,4,,mmddyy
+TEDOC_DUEDATE
+TEDOC_MISCINFO
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID
+TETRANS_DOCNUM
+TETRANS_DESCRIPTION,3
+TETRANS_ENTRY_TYPE,,N
+TETRANS_EFFECTIVEDATE,4,,mmddyy
+TETRANS_SEGMENT_GL,2,,,8,5
+TETRANS_SEGMENT_Fund,2,,,1,2
+TETRANS_SEGMENT_Grant,2,,,4,3
+TETRANS_SEGMENT_Progr,2,,,14,3
+TETRANS_SEGMENT_Dept,2,,,18,3
+TETRANS_SEGMENT_117,2,,,12,1
+TETRANS_DEBIT,6,0,,,,0
+TETRANS_CREDIT,6,0,,,,0
+TETRANS_1099BOX
+TETRANS_MATCH_DOCNUM
+ENDCONTEXT
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
@@ -43,3 +44,50 @@ BKREC_DESC,6
 ENDCONTEXT
 
 
+=======
+REM, This sample file is subject to change by Abila MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  Abila MIP replaces the sample DEF files when you 
+REM, install new releases.  The placement of context type and field names are of
+REM, importance, do not change the order.  If you change the order this may cause
+REM, the import to fail.
+REM,--------------------------------------------------------------------------
+REM,                      BANK RECONCILIATION MODULE
+REM,                      Default Import Def File 
+REM,--------------------------------------------------------------------------
+REM, The following lines define where the data files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate. Also included here is the CONTEXTIDPOSITION,1 which must be
+REM, present in order for the system to find the context Ids for all data being
+REM, imported.
+REM,--------------------------------------------------------------------------
+FILE,BKREC, C:\MIP Share\Import\CSV Samples\BKRec.csv
+
+CONTEXTIDPOSITION,1
+FILETYPE,CSV
+DISCARDFIRSTNRECORDS,4
+
+REM,--------------------------------------------------------------------------
+REM,                      Bank Reconciliation Information Import
+REM,--------------------------------------------------------------------------
+REM, Bank Recconciliation Header Information
+REM,--------------------------------------------------------------------------
+REM, BKREC_CHECK_FLAG,0,CHECK - The exact word in the description field of the
+REM, file to be imported that indicates a transaction is a check. Ex: if the file
+REM, has 'CHK' to indicate a check, change 'CHECK' to 'CHK'.
+REM, BKREC_DEPOSIT_FLAG,0,DEPOSIT - The exact word in the description field of
+REM, the file to be imported that indicates a transaction is a deposit. Ex: if 
+REM, the file has 'DEP' to indicate a check, chnage 'DEPOSIT' to 'DEP'.
+REM,--------------------------------------------------------------------------
+CONTEXT,BKREC,HEADER,HBKREC
+BKREC_CHECK_FLAG,0,CHECK
+BKREC_DEPOSIT_FLAG,0,DEPOSIT
+BKREC_CASH_ACCT,2,11001
+BKREC_REC_DATE,3,,MM/DD/YYYY
+BKREC_DOC_NUM,4
+BKREC_AMOUNT,5,,,,,0
+BKREC_DESC,6
+ENDCONTEXT
+
+
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

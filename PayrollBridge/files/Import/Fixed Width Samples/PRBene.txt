@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HBene       Tuition ATuition Allowance             511012110112AFA01000000.0000009999999-1-1-1-1-1-1-1+0AE-1Pay   00.000000  
+=======
+HBene       Tuition ATuition Allowance             511012110112AFA01000000.0000009999999-1-1-1-1-1-1-1+0AE-1Pay   00.000000  
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

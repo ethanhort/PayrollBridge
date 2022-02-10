@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 XYZ MANUFACTURING CORPORATION,,,,,
 10/11/2012,pt0551,12,01-101-17501,Depreciation Exp Period Ended 10/31/05,-72450
 10/11/2012,pt0551,12,01-101-59001-101-101-1,Depreciation Exp Period Ended 10/31/05,72450
+=======
+XYZ MANUFACTURING CORPORATION,,,,,
+10/11/2012,pt0551,12,01-101-17501,Depreciation Exp Period Ended 10/31/05,-72450
+10/11/2012,pt0551,12,01-101-59001-101-101-1,Depreciation Exp Period Ended 10/31/05,72450
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

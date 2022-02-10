@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HCUST State      Trn       COSMOSTRAIN    Cosmos Training for Youth          A www.CosmosTrain.com 78484      48455 Knotty Pine Bluff            Austin   65-125965748              TX     78752          Dr Icee      T Scroftt           ED                  Scroftt@cosmos.org  (512)331-5164100         (512)335-7215  1 3046101      Direct        0                        
+=======
+HCUST State      Trn       COSMOSTRAIN    Cosmos Training for Youth          A www.CosmosTrain.com 78484      48455 Knotty Pine Bluff            Austin   65-125965748              TX     78752          Dr Icee      T Scroftt           ED                  Scroftt@cosmos.org  (512)331-5164100         (512)335-7215  1 3046101      Direct        0                        
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

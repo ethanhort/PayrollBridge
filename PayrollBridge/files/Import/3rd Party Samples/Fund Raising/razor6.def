@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 REM, This sample file is subject to change by MIP.  If you intend to use this 
 REM, Def file for import purposes you should either rename the file or move it
 REM, to a different directory.  MIP replaces the sample DEF files when you 
@@ -69,3 +70,76 @@ TETRANS_DEBIT,269,11,0,2
 TETRANS_CREDIT,336,11,0,2
 TETRANS_1099BOX
 ENDCONTEXT
+=======
+REM, This sample file is subject to change by MIP.  If you intend to use this 
+REM, Def file for import purposes you should either rename the file or move it
+REM, to a different directory.  MIP replaces the sample DEF files when you 
+REM, install new releases.
+
+REM,----------------------------------------------------------------------------
+REM,                             SampleTR.def
+REM,                      Session Information Import
+REM,----------------------------------------------------------------------------
+REM, The only transactions that you can import into NPS are Cash Disbursements,
+REM, Cash Receipts, Journal Vouchers, Budget Documents, A/P Invoices, A/R Bills,
+REM, A/P Credit Memos, Manual A/P Checks, A/R Credit Memos, A/R Receipts, and
+REM, Encumbrances.
+
+REM,----------------------------------------------------------------------------
+REM, Customize the number of segments and segment names
+REM, to correspond with your orgs account structure.
+REM, Review the default data in this definition file
+REM, each time you import a new session.
+REM,----------------------------------------------------------------------------
+
+REM,----------------------------------------------------------------------------
+REM,                           RAZOR DEF FILE
+REM,----------------------------------------------------------------------------
+REM, The following lines define where the text files are located that hold the
+REM, data to be imported. You should modify these path and filenames as
+REM, appropriate.
+REM,----------------------------------------------------------------------------
+
+REM, You can edit this path to identify the data location and filename. 
+FILE,SESSION, C:\MIP Share\Import\
+
+CONTEXTIDPOSITION,1,6
+
+RAZOR
+
+CONTEXT,SESSION,HEADER,HSESSN
+SESSION_SESSIONNUMID,,,BBREtst
+SESSION_STATUS,,,BP
+SESSION_DESCRIPTION,,,Imported Session
+SESSION_SESSIONDATE,,,06/13/2005
+SESSION_TRANSSOURCEID,,,CR
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,HEADER,HDOC
+TEDOC_SESSION,,,BBREtst
+TEDOC_TRANSOURCE,,,CR
+TEDOC_DOCNUM,,,1000150
+TEDOC_DESCRIPTION,,,Imported Document
+rem, TEDOC_PLAYER_ID
+TEDOC_DOCDATE,,,06/13/2005
+rem, TEDOC_DUEDATE
+rem, TEDOC_MISCINFO
+ENDCONTEXT
+
+CONTEXT,TRANSENTRY,DETAIL,DDOC
+TETRANS_SESSIONNUMID,,,BBREtst
+TETRANS_DOCNUM,,,1000150
+TETRANS_DESCRIPTION,202,30
+TETRANS_ENTRY_TYPE,,,N
+TETRANS_EFFECTIVEDATE,,,06/13/2005
+TETRANS_SEGMENT_GL,4,5
+TETRANS_SEGMENT_Fund,1,2
+TETRANS_SEGMENT_Grant,10,3
+TETRANS_SEGMENT_Progr,14,3
+TETRANS_SEGMENT_Dept,,,101
+TETRANS_SEGMENT_117,,,1
+TETRANS_DEBIT,269,11,0,2
+TETRANS_CREDIT,336,11,0,2
+TETRANS_1099BOX
+ENDCONTEXT
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git

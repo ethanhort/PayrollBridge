@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 HEMPINF,Harris,A,Harris,Lisa,789-64-8455,7854 Hiding Ranch,Austin,TX,78759,6/1/2017,7/1/1972,6/1/2017,(512)258-9874,(512)258-9875,Admin,Administrator,S,175000,1,1,M,0,N,TX,,0,0,0,0,1,USA,M,M,CAUS,PROB,RES,12121122,TX,1/1/2020,C,Lisa.Harris@mip.com,1,1,Lisa.Harris@mip.com,<Default>,United States,4011,1,0,0,0,0,0,0,0
 DEMPINF,Harris,123456789,952963,1,22
 DEMPOT,Harris,OTImport1,1000
+=======
+HEMPINF,Harris,A,Harris,Lisa,789-64-8455,7854 Hiding Ranch,Austin,TX,78759,6/1/2017,7/1/1972,6/1/2017,(512)258-9874,(512)258-9875,Admin,Administrator,S,175000,1,1,M,0,N,TX,,0,0,0,0,1,USA,M,M,CAUS,PROB,RES,12121122,TX,1/1/2020,C,Lisa.Harris@mip.com,1,1,Lisa.Harris@mip.com,<Default>,United States,4011,1,0,0,0,0,0,0,0
+DEMPINF,Harris,123456789,952963,1,22
+DEMPOT,Harris,OTImport1,1000
+>>>>>>> branch 'master' of https://github.com/ethanhort/PayrollBridge.git
 DEMPEMPT,Harris,OTImport1,OT1E1,2
